@@ -1,65 +1,129 @@
-import Image from "next/image";
+import type { Metadata } from "next"
+import Hero from "@/components/hero/Hero"
+import ServicesGrid from "@/components/services/ServicesGrid"
+import RegionGrid from "@/components/region-grid/RegionGrid"
+import Suppliers from "@/components/suppliers/Suppliers"
+import Locations from "@/components/locations/Locations"
+
+import CTA from "@/components/cta/CTA"
+
+export const metadata: Metadata = {
+  title: "Streamline Exteriors | Premium Exterior Systems — BC & Alberta",
+  description:
+    "Family owned since 1994. Streamline Exteriors is BC and Alberta's premier exterior contractor — siding, gutters, windows, commercial facades, and renovation. Gentek certified. $15M insured. Serving Kelowna, Vernon, Salmon Arm, Revelstoke, Enderby, and Calgary.",
+  keywords: [
+    "exterior contractor BC",
+    "exterior contractor Alberta",
+    "siding contractor Kelowna",
+    "siding contractor Vernon",
+    "siding contractor Salmon Arm",
+    "gutters BC",
+    "James Hardie installer BC",
+    "Gentek certified renovator",
+    "GutterGlove distributor Canada",
+    "commercial exterior contractor BC",
+    "multifamily siding BC",
+  ],
+  openGraph: {
+    title: "Streamline Exteriors | Premium Exterior Systems — BC & Alberta",
+    description:
+      "Family owned since 1994. Gentek certified. Canada's #1 GutterGlove distributor. From residential estates to 50-unit strata complexes — one standard across BC and Alberta.",
+    type: "website",
+    url: "https://www.streamlineexteriors.ca",
+    siteName: "Streamline Exteriors",
+  },
+  alternates: {
+    canonical: "https://www.streamlineexteriors.ca",
+  },
+}
+
+const ORG_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+  name: "Streamline Exteriors Ltd.",
+  url: "https://www.streamlineexteriors.ca",
+  logo: "https://www.streamlineexteriors.ca/logo.png",
+  telephone: "+12508320610",
+  email: "sales@streamlineexteriors.ca",
+  foundingDate: "1994",
+  description:
+    "Premium exterior systems for residential and commercial projects across British Columbia and Alberta. Family owned since 1994.",
+  address: [
+    { "@type": "PostalAddress", addressLocality: "Salmon Arm", addressRegion: "BC", addressCountry: "CA" },
+    { "@type": "PostalAddress", addressLocality: "Vernon", addressRegion: "BC", addressCountry: "CA" },
+  ],
+  areaServed: [
+    { "@type": "City", name: "Kelowna", containedInPlace: { "@type": "Province", name: "British Columbia" } },
+    { "@type": "City", name: "Vernon", containedInPlace: { "@type": "Province", name: "British Columbia" } },
+    { "@type": "City", name: "Salmon Arm", containedInPlace: { "@type": "Province", name: "British Columbia" } },
+    { "@type": "City", name: "Enderby", containedInPlace: { "@type": "Province", name: "British Columbia" } },
+    { "@type": "City", name: "Revelstoke", containedInPlace: { "@type": "Province", name: "British Columbia" } },
+    { "@type": "City", name: "Calgary", containedInPlace: { "@type": "Province", name: "Alberta" } },
+  ],
+  hasOfferCatalog: {
+    "@type": "OfferCatalog",
+    name: "Exterior Construction Services",
+    itemListElement: [
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Residential Siding & Cladding", url: "https://www.streamlineexteriors.ca/residential" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Exterior Facades", url: "https://www.streamlineexteriors.ca/commercial" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Multifamily Building Envelopes", url: "https://www.streamlineexteriors.ca/multifamily" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gutter Installation & Guards", url: "https://www.streamlineexteriors.ca/gutters" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Renovation", url: "https://www.streamlineexteriors.ca/renovation" } },
+    ],
+  },
+  sameAs: [
+    "https://www.facebook.com/streamlineexteriorscanada/",
+    "https://www.instagram.com/streamline.exteriors/",
+    "https://www.linkedin.com/company/streamline-exteriors/",
+  ],
+}
+
+const WEBSITE_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Streamline Exteriors",
+  url: "https://www.streamlineexteriors.ca",
+  potentialAction: {
+    "@type": "SearchAction",
+    target: "https://www.streamlineexteriors.ca/projects?q={search_term_string}",
+    "query-input": "required name=search_term_string",
+  },
+}
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
+    <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(ORG_SCHEMA) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(WEBSITE_SCHEMA) }} />
+      <main className="bg-black">
+        {/* 1 · Full-screen cinematic hero */}
+        <Hero slides={[
+          "/images/projects/residential-night.jpg",
+          "/images/projects/residential-lakehouse.jpg",
+          "/images/projects/residential-cedar-panel.jpg",
+          "/images/projects/multifamily-kelowna.jpg",
+          "/images/projects/residential-luxury.jpg",
+          "/images/projects/commercial-lakeside.jpg",
+          "/images/projects/residential-modern.jpg",
+          "/images/projects/residential-farmhouse.jpg",
+          "/images/projects/residential-chalet.jpg",
+        ]} />
+
+        {/* 2 · Alternating full-bleed service cards */}
+        <ServicesGrid />
+
+        {/* 3 · Photo grid — real project photography */}
+        <RegionGrid />
+
+        {/* 5 · Regional locations map */}
+        <Locations />
+
+        {/* 6 · Partner / supplier marquee */}
+        <Suppliers />
+
+        {/* 7 · Final CTA with stats */}
+        <CTA />
       </main>
-    </div>
-  );
+    </>
+  )
 }
