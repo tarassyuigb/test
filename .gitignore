@@ -40,10 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# large video files (host on Cloudflare/CDN instead)
-public/videos/
+# raw large video dumps (original files)
 public/*.mp4
-public/**/*.mp4
+public/drive-download-*/*.mp4
 
 # raw upload dumps
 public/drive-download-*/
