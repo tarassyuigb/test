@@ -88,7 +88,7 @@ export default function ContactPage() {
         <div className="hidden lg:block lg:w-[42%] xl:w-[46%] relative">
           <div className="sticky top-0 h-screen overflow-hidden">
             <img
-              src="/images/projects/real-residential-modern.jpg"
+              src="/images/projects/real-residential-siding.jpg"
               alt="Streamline Exteriors project"
               className="absolute inset-0 w-full h-full object-cover"
               style={{ objectPosition: "center 30%" }}
