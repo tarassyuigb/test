@@ -64,8 +64,8 @@ export default function ContactPage() {
 
             <ContactForm />
 
-            {/* Phone quick-links below form */}
-            <div className="flex flex-col sm:flex-row gap-6 mt-12 pt-10 border-t border-white/[0.05]">
+            {/* Phone quick-links — mobile only (shown on right panel on desktop) */}
+            <div className="flex flex-col sm:flex-row gap-6 mt-12 pt-10 border-t border-white/[0.05] lg:hidden">
               {OFFICES.map((o) => (
                 <div key={o.city}>
                   <p className="text-[9px] font-semibold uppercase tracking-[0.32em] text-white/35 mb-1.5">{o.note}</p>
@@ -84,30 +84,64 @@ export default function ContactPage() {
           </FadeIn>
         </div>
 
-        {/* ── Right: photo panel ── */}
-        <div className="hidden lg:block lg:w-[42%] xl:w-[46%] relative">
-          <div className="sticky top-0 h-screen overflow-hidden">
+        {/* ── Right: photo + info panel ── */}
+        <div className="hidden lg:flex lg:flex-col lg:w-[42%] xl:w-[46%] sticky top-0 h-screen overflow-hidden">
+
+          {/* Photo */}
+          <div className="relative overflow-hidden" style={{ flex: "0 0 58%" }}>
             <img
               src="/images/projects/real-residential-siding.jpg"
               alt="Streamline Exteriors project"
-              className="absolute inset-0 w-full h-full object-contain"
-              style={{ objectPosition: "center center" }}
+              className="absolute inset-0 w-full h-full object-cover"
+              style={{ objectPosition: "center 40%" }}
             />
-            {/* Dark overlay */}
-            <div className="absolute inset-0 bg-black/40" />
-            {/* Blue accent */}
-            <div
-              className="absolute inset-0 pointer-events-none"
-              style={{
-                background: "radial-gradient(ellipse at 0% 100%, rgba(20,0,139,0.22) 0%, transparent 55%)",
-              }}
-            />
-
-            {/* Caption bottom-left */}
-            <div className="absolute bottom-10 left-10">
-              <p className="text-[9px] font-semibold uppercase tracking-[0.38em] text-white/40 mb-1">Shuswap Custom Home</p>
-              <p className="text-white/60 text-[11px] font-light tracking-wide">Vertical Fibre Cement · Salmon Arm, BC</p>
+            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 pointer-events-none" style={{ background: "radial-gradient(ellipse at 0% 100%, rgba(20,0,139,0.2) 0%, transparent 55%)" }} />
+            <div className="absolute bottom-5 left-7">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.38em] text-white/40 mb-0.5">Shuswap Custom Home</p>
+              <p className="text-white/55 text-[11px] font-light tracking-wide">Vertical Fibre Cement · Salmon Arm, BC</p>
             </div>
+          </div>
+
+          {/* Info below photo */}
+          <div className="flex flex-col justify-center flex-1 px-10 py-8 border-t border-white/[0.06] space-y-7">
+
+            {/* Phones */}
+            <div>
+              <p className="text-[9px] font-semibold uppercase tracking-[0.42em] text-white/40 mb-4">Call Us</p>
+              <div className="space-y-4">
+                {OFFICES.map((o) => (
+                  <div key={o.city}>
+                    <p className="text-[9px] uppercase tracking-[0.28em] text-white/30 mb-1">{o.note}</p>
+                    <a href={o.href} className="text-white text-[15px] font-light tracking-wide hover:text-white/70 transition-colors duration-200">
+                      {o.phone}
+                    </a>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Email */}
+            <div className="pt-6 border-t border-white/[0.06]">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.42em] text-white/40 mb-3">Email</p>
+              <a href={`mailto:${BUSINESS.email}`} className="text-white text-[13px] font-light tracking-wide hover:text-white/70 transition-colors duration-200">
+                {BUSINESS.email}
+              </a>
+            </div>
+
+            {/* Locations */}
+            <div className="pt-6 border-t border-white/[0.06]">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.42em] text-white/40 mb-4">Locations</p>
+              <div className="grid grid-cols-2 gap-x-6 gap-y-1.5">
+                {CITIES.map((city) => (
+                  <div key={city.id} className="flex items-baseline gap-1.5 min-w-0">
+                    <span className="text-white/70 text-[11px] font-light tracking-wide truncate">{city.name}</span>
+                    <span className="text-white/25 text-[8.5px] uppercase tracking-[0.16em] shrink-0">{city.province === "British Columbia" ? "BC" : "AB"}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+
           </div>
         </div>
 
