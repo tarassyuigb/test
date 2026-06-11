@@ -110,31 +110,16 @@ export default function ProjectsPage() {
                   </div>
 
                   {/* Info panel */}
-                  <div className="px-5 pt-5 pb-6">
-                    <h2 className="font-display font-black text-white uppercase leading-[0.94] tracking-[-0.01em] mb-2.5" style={{ fontSize: "clamp(17px, 1.6vw, 22px)" }}>
+                  <div className="px-5 pt-4 pb-5">
+                    <h2 className="font-display font-black text-white uppercase leading-[0.94] tracking-[-0.01em] mb-3" style={{ fontSize: "clamp(16px, 1.5vw, 21px)" }}>
                       {project.title}
                     </h2>
-
-                    <div className="flex items-center gap-1.5 mb-4">
-                      <svg width="9" height="9" viewBox="0 0 10 12" fill="none" className="shrink-0 opacity-40">
-                        <path d="M5 0C2.24 0 0 2.24 0 5c0 3.75 5 7 5 7s5-3.25 5-7c0-2.76-2.24-5-5-5Zm0 6.5A1.5 1.5 0 1 1 5 3.5a1.5 1.5 0 0 1 0 3Z" fill="white"/>
-                      </svg>
-                      <span className="text-white/40 text-[11px] tracking-wide">{project.location}</span>
-                    </div>
-
-                    <div className="flex items-center justify-between gap-3 pt-4 border-t border-white/[0.06]">
-                      <div>
-                        <p className="text-white text-[11.5px] font-medium tracking-wide leading-snug">
-                          {project.material}
-                        </p>
-                        <p className="text-white/40 text-[10px] tracking-wide mt-0.5">
-                          {project.type}
-                        </p>
-                      </div>
-                      <span className="font-mono text-[9px] tracking-[0.22em] text-white/25 shrink-0">
-                        {project.year}
-                      </span>
-                    </div>
+                    <p className="text-white text-[11.5px] font-medium tracking-wide leading-snug">
+                      {project.material}
+                    </p>
+                    <p className="text-white/40 text-[10px] tracking-wide mt-0.5">
+                      {project.type}
+                    </p>
                   </div>
                 </Link>
               ))}
