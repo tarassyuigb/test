@@ -33,7 +33,6 @@ const NAV_COLS = [
       { label: "Kelowna, BC", href: "/locations/kelowna" },
       { label: "Vernon, BC", href: "/locations/vernon" },
       { label: "Salmon Arm, BC", href: "/locations/salmon-arm" },
-      { label: "Enderby, BC", href: "/locations/enderby" },
       { label: "Revelstoke, BC", href: "/locations/revelstoke" },
       { label: "Calgary, AB", href: "/locations/calgary" },
     ],
@@ -76,8 +75,10 @@ const SUPPLIERS = [
   "LP SmartSide",
   "Allura",
   "Longboard",
+  "Lux Products",
+  "Westform",
+  "Woodtone",
   "Convoy Supply",
-  "Fisher",
 ]
 
 export default function Footer() {
@@ -134,7 +135,7 @@ export default function Footer() {
               />
             </div>
 
-            <p className="text-white/28 text-[12.5px] font-light leading-relaxed tracking-wide max-w-[310px] mb-6">
+            <p className="text-white text-[12.5px] font-light leading-relaxed tracking-wide max-w-[310px] mb-6">
               Premium exterior systems for residential and commercial
               projects across British Columbia and Alberta.
             </p>
@@ -142,21 +143,21 @@ export default function Footer() {
             <div className="space-y-2">
               <a
                 href={BUSINESS.phone.primaryHref}
-                className="flex items-center gap-3 text-white/30 text-[12px] tracking-wide hover:text-white/65 transition-colors duration-300 group"
+                className="flex items-center gap-3 text-white text-[12px] tracking-wide hover:text-white transition-colors duration-300 group"
               >
                 <span className="w-3.5 h-px bg-[#14008B]/50 group-hover:w-5 transition-all duration-300" />
                 {BUSINESS.phone.primary} · Salmon Arm
               </a>
               <a
                 href={BUSINESS.phone.vernonHref}
-                className="flex items-center gap-3 text-white/30 text-[12px] tracking-wide hover:text-white/65 transition-colors duration-300 group"
+                className="flex items-center gap-3 text-white text-[12px] tracking-wide hover:text-white transition-colors duration-300 group"
               >
                 <span className="w-3.5 h-px bg-[#14008B]/50 group-hover:w-5 transition-all duration-300" />
                 {BUSINESS.phone.vernon} · Vernon
               </a>
               <a
                 href={`mailto:${BUSINESS.email}`}
-                className="flex items-center gap-3 text-white/30 text-[12px] tracking-wide hover:text-white/65 transition-colors duration-300 group"
+                className="flex items-center gap-3 text-white text-[12px] tracking-wide hover:text-white transition-colors duration-300 group"
               >
                 <span className="w-3.5 h-px bg-[#14008B]/50 group-hover:w-5 transition-all duration-300" />
                 {BUSINESS.email}
@@ -173,19 +174,19 @@ export default function Footer() {
           >
             <div className="flex items-center gap-2.5 mb-1">
               <div className="h-px w-4 shrink-0 bg-[#14008B]/55" />
-              <span className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white/20">Why Streamline</span>
+              <span className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white">Why Streamline</span>
             </div>
             {[
               "Family owned since 1994",
               "Gentek Certified — 1 of 200 in Canada",
-              "Canada's #1 GutterGlove Distributor",
-              "$15M Liability Insurance",
+              "Bonded",
+              "$10M Liability Insurance",
               "Continuous WCB Coverage",
               "Step Code Compliant Installer",
             ].map((line) => (
               <div key={line} className="flex items-center gap-3">
                 <div className="w-[3px] h-[3px] rounded-full bg-[#14008B]/60 shrink-0" />
-                <span className="text-white/30 text-[11.5px] font-light tracking-wide">{line}</span>
+                <span className="text-white text-[11.5px] font-light tracking-wide">{line}</span>
               </div>
             ))}
           </motion.div>
@@ -198,14 +199,14 @@ export default function Footer() {
             transition={{ delay: 0.2, duration: 0.85, ease: EASE }}
           >
             <div className="lg:text-right">
-              <p className="text-white/14 text-[9px] font-medium uppercase tracking-[0.44em] mb-2">
+              <p className="text-white text-[9px] font-medium uppercase tracking-[0.44em] mb-2">
                 Licensed & Insured
               </p>
-              <p className="text-white/30 text-[11.5px] font-light tracking-wide">
+              <p className="text-white text-[11.5px] font-light tracking-wide">
                 BC & Alberta Operations
               </p>
               <div className="flex items-center lg:justify-end gap-2 mt-3">
-                <span className="text-white/14 text-[9px] uppercase tracking-[0.32em]">Since</span>
+                <span className="text-white text-[9px] uppercase tracking-[0.32em]">Since</span>
                 <span
                   className="font-display font-black text-[#14008B]/60 uppercase leading-none"
                   style={{ fontSize: "clamp(18px, 2vw, 28px)" }}
@@ -221,7 +222,7 @@ export default function Footer() {
                   key={s.label}
                   href={s.href}
                   aria-label={s.label}
-                  className="w-9 h-9 border border-white/[0.1] flex items-center justify-center text-white/22 hover:text-white/65 hover:border-white/22 transition-all duration-300"
+                  className="w-9 h-9 border border-white/[0.1] flex items-center justify-center text-white hover:text-white hover:border-white/22 transition-all duration-300"
                 >
                   <svg width="14" height="14" viewBox={s.viewBox} fill="currentColor">
                     <path d={s.path} />
@@ -245,7 +246,7 @@ export default function Footer() {
             >
               <div className="flex items-center gap-2.5 mb-6">
                 <div className="h-px w-4 shrink-0 bg-[#14008B]/55" />
-                <h3 className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white/26">
+                <h3 className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white">
                   {col.heading}
                 </h3>
               </div>
@@ -254,7 +255,7 @@ export default function Footer() {
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="group inline-flex text-white/38 text-[12.5px] font-light tracking-wide hover:text-white transition-colors duration-200"
+                      className="group inline-flex text-white text-[12.5px] font-light tracking-wide hover:text-white transition-colors duration-200"
                     >
                       <span className="relative">
                         {link.label}
@@ -278,14 +279,14 @@ export default function Footer() {
       >
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 py-5">
           <div className="flex flex-wrap items-center gap-x-7 gap-y-3">
-            <span className="text-white/16 text-[9px] font-medium uppercase tracking-[0.4em] shrink-0 mr-1">
+            <span className="text-white text-[9px] font-medium uppercase tracking-[0.4em] shrink-0 mr-1">
               Approved Installers
             </span>
             <span className="text-white/[0.08] hidden sm:block">·</span>
             {SUPPLIERS.map((name, i) => (
               <span
                 key={i}
-                className="text-white/18 text-[9.5px] font-medium uppercase tracking-[0.24em]"
+                className="text-white text-[9.5px] font-medium uppercase tracking-[0.24em]"
               >
                 {name}
               </span>
@@ -298,7 +299,7 @@ export default function Footer() {
       <div className="relative border-t border-white/[0.04]">
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <motion.p
-            className="text-white/18 text-[10px] font-light tracking-[0.18em]"
+            className="text-white text-[10px] font-light tracking-[0.18em]"
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ delay: 0.54, duration: 0.7, ease: EASE }}
@@ -316,7 +317,7 @@ export default function Footer() {
               <Link
                 key={item.label}
                 href={item.href}
-                className="text-white/18 text-[9.5px] font-medium uppercase tracking-[0.28em] hover:text-white/48 transition-colors duration-200"
+                className="text-white text-[9.5px] font-medium uppercase tracking-[0.28em] hover:text-white transition-colors duration-200"
               >
                 {item.label}
               </Link>

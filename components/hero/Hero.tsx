@@ -30,7 +30,7 @@ const fadeUp = {
   show: { opacity: 1, y: 0, transition: { duration: 0.95, ease: EASE } },
 }
 
-const SLIDE_DURATION = 3000
+const SLIDE_DURATION = 6000
 
 export default function Hero({ imageSrc, imageAlt, slides }: HeroProps) {
   const sectionRef = useRef<HTMLElement>(null)
@@ -71,15 +71,14 @@ export default function Hero({ imageSrc, imageAlt, slides }: HeroProps) {
         {isCarousel ? (
           /* ── Carousel slides ── */
           <>
-            <AnimatePresence mode="sync">
+            <AnimatePresence>
               <motion.div
                 key={activeIndex}
                 className="absolute"
-                style={{ inset: "-8%" }}
+                style={{ inset: "-8%", zIndex: 1 }}
                 initial={{ opacity: 0, scale: 1.06 }}
-                animate={{ opacity: 1, scale: 1.0 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 1.2, ease: [0, 0, 0.18, 1] }}
+                animate={{ opacity: 1, scale: 1.0, transition: { duration: 1.8, ease: [0.25, 0.1, 0.25, 1] } }}
+                exit={{ opacity: 0, scale: 1.0, transition: { duration: 1.0, ease: [0.4, 0, 1, 1] } }}
               >
                 <img
                   src={slides[activeIndex]}
@@ -277,7 +276,7 @@ export default function Hero({ imageSrc, imageAlt, slides }: HeroProps) {
             ) : (
               <Link
                 href="/contact"
-                className="group inline-flex items-center gap-3 px-8 py-[15px] text-[11px] font-semibold uppercase tracking-[0.26em] text-white/52 transition-colors duration-300 hover:text-white"
+                className="group inline-flex items-center gap-3 px-8 py-[15px] text-[11px] font-semibold uppercase tracking-[0.26em] text-white transition-colors duration-300 hover:text-white"
               >
                 <span className="relative">
                   Get Estimate

@@ -10,7 +10,7 @@ import CTA from "@/components/cta/CTA"
 export const metadata: Metadata = {
   title: "Streamline Exteriors | Premium Exterior Systems — BC & Alberta",
   description:
-    "Family owned since 1994. Streamline Exteriors is BC and Alberta's premier exterior contractor — siding, gutters, windows, commercial facades, and renovation. Gentek certified. $15M insured. Serving Kelowna, Vernon, Salmon Arm, Revelstoke, Enderby, and Calgary.",
+    "Family owned since 1994. Streamline Exteriors is BC and Alberta's premier exterior contractor — siding, gutters, windows, commercial facades, and renovation. Gentek certified. $10M insured. Serving Kelowna, Vernon, Salmon Arm, Revelstoke, and Calgary.",
   keywords: [
     "exterior contractor BC",
     "exterior contractor Alberta",
@@ -20,14 +20,14 @@ export const metadata: Metadata = {
     "gutters BC",
     "James Hardie installer BC",
     "Gentek certified renovator",
-    "GutterGlove distributor Canada",
+    "GutterGlove leaf guards",
     "commercial exterior contractor BC",
     "multifamily siding BC",
   ],
   openGraph: {
     title: "Streamline Exteriors | Premium Exterior Systems — BC & Alberta",
     description:
-      "Family owned since 1994. Gentek certified. Canada's #1 GutterGlove distributor. From residential estates to 50-unit strata complexes — one standard across BC and Alberta.",
+      "Family owned since 1994. Gentek certified. From residential estates to 50-unit strata complexes — one standard across BC and Alberta.",
     type: "website",
     url: "https://www.streamlineexteriors.ca",
     siteName: "Streamline Exteriors",
@@ -56,7 +56,6 @@ const ORG_SCHEMA = {
     { "@type": "City", name: "Kelowna", containedInPlace: { "@type": "Province", name: "British Columbia" } },
     { "@type": "City", name: "Vernon", containedInPlace: { "@type": "Province", name: "British Columbia" } },
     { "@type": "City", name: "Salmon Arm", containedInPlace: { "@type": "Province", name: "British Columbia" } },
-    { "@type": "City", name: "Enderby", containedInPlace: { "@type": "Province", name: "British Columbia" } },
     { "@type": "City", name: "Revelstoke", containedInPlace: { "@type": "Province", name: "British Columbia" } },
     { "@type": "City", name: "Calgary", containedInPlace: { "@type": "Province", name: "Alberta" } },
   ],
@@ -65,8 +64,7 @@ const ORG_SCHEMA = {
     name: "Exterior Construction Services",
     itemListElement: [
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Residential Siding & Cladding", url: "https://www.streamlineexteriors.ca/residential" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial Exterior Facades", url: "https://www.streamlineexteriors.ca/commercial" } },
-      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Multifamily Building Envelopes", url: "https://www.streamlineexteriors.ca/multifamily" } },
+      { "@type": "Offer", itemOffered: { "@type": "Service", name: "Commercial & Multifamily Building Envelopes", url: "https://www.streamlineexteriors.ca/commercial" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Gutter Installation & Guards", url: "https://www.streamlineexteriors.ca/gutters" } },
       { "@type": "Offer", itemOffered: { "@type": "Service", name: "Exterior Renovation", url: "https://www.streamlineexteriors.ca/renovation" } },
     ],
@@ -98,15 +96,15 @@ export default function Home() {
       <main className="bg-black">
         {/* 1 · Full-screen cinematic hero */}
         <Hero slides={[
-          "/images/projects/residential-night.jpg",
+          "/images/projects/real-residential-modern.jpg",
+          "/images/projects/real-multifamily.jpg",
+          "/images/projects/real-metal-siding.jpg",
+          "/images/projects/real-residential-siding.jpg",
           "/images/projects/residential-lakehouse.jpg",
-          "/images/projects/residential-cedar-panel.jpg",
-          "/images/projects/multifamily-kelowna.jpg",
-          "/images/projects/residential-luxury.jpg",
           "/images/projects/commercial-lakeside.jpg",
-          "/images/projects/residential-modern.jpg",
+          "/images/projects/residential-cedar-snow.jpg",
           "/images/projects/residential-farmhouse.jpg",
-          "/images/projects/residential-chalet.jpg",
+          "/images/projects/residential-mixed-cladding.jpg",
         ]} />
 
         {/* 2 · Alternating full-bleed service cards */}

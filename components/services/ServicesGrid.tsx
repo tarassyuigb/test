@@ -8,8 +8,8 @@ const SERVICES = [
     label: "Commercial & Multifamily",
     headline: "Building Envelopes",
     sub: "Metal Panel · Rainscreen · ACM · Longboard · Strata · Low-Rise",
-    body: "Full building envelope systems for commercial, institutional, strata, and multi-family developments. Longboard aluminum, ACM panel, metal rainscreen, and fibre cement — Step Code compliant, on schedule.",
-    photo: "/images/projects/commercial-hotel.jpg",
+    body: "Complete building envelope systems for commercial, institutional, strata, and multi-family developments. Specializing in exterior insulation, thermal sub-framing, girts, ACM panels, rainscreen systems, metal and fibre cement cladding. Delivering Step Code-compliant building envelope systems with quality workmanship—on budget and on schedule.",
+    photo: "/images/projects/real-multifamily.jpg",
     photoPos: "center 30%",
   },
   {
@@ -19,19 +19,19 @@ const SERVICES = [
     label: "Residential",
     headline: "Siding & Cladding",
     sub: "James Hardie · LP SmartSide · Metal · Cedar · Vinyl",
-    body: "Full exterior systems for single-family and custom homes. Fibre cement, engineered wood, metal cladding, and cedar — installed across the Okanagan, Shuswap, and Alberta since 1994.",
-    photo: "/images/projects/residential-night.jpg",
+    body: "Custom exterior design and cladding solutions for single-family and custom homes. From design consultation and 3D renderings to expert installation of fibre cement, engineered wood, metal cladding, and cedar, we help homeowners create distinctive, high-performance exteriors. Serving the Okanagan, Shuswap, and Alberta since 1994.",
+    photo: "/images/projects/real-residential-modern.jpg",
     photoPos: "center 40%",
   },
   {
     id: "gutters",
     num: "03",
     href: "/gutters",
-    label: "Gutters",
+    label: "Gutters & Leaf-guards",
     headline: "Seamless Systems",
     sub: "GutterGlove · IceBreaker · Euro · Seamless",
-    body: "Continuous seamless eavestroughs, GutterGlove micro-mesh guards, IceBreaker heated systems, and Euro-style architectural gutters. Canada's #1 GutterGlove distributor.",
-    photo: "/images/projects/gutters-copper.jpg",
+    body: "Complete eavestrough and drainage systems for residential and commercial projects. Featuring seamless eavestroughs in multiple profiles, stainless steel micro-mesh gutter guards, heated gutter protection systems, and architectural gutter solutions. Delivering reliable water management solutions across Western Canada since 1994.",
+    photo: "/images/projects/real-metal-siding.jpg",
     photoPos: "center 50%",
   },
   {
@@ -41,8 +41,8 @@ const SERVICES = [
     label: "Full Renovation",
     headline: "Complete Exterior",
     sub: "Gentek · Windows · Doors · Soffits · Siding",
-    body: "Complete exterior transformations — siding replacement, window and door packages, soffits, fascia, and trim. Free computer-rendered visualization included before any commitment.",
-    photo: "/images/projects/residential-farmhouse.jpg",
+    body: "Transform your home's exterior with confidence. From siding replacement and window and door packages to custom decks, covered outdoor living spaces, soffits, fascia, trim, and structural enhancements, we provide expert consultation and complimentary 3D renderings so you can see your vision come to life before construction begins.",
+    photo: "/images/projects/real-residential-siding.jpg",
     photoPos: "center 35%",
   },
 ]
@@ -56,7 +56,7 @@ export default function ServicesGrid() {
           <div>
             <div className="flex items-center gap-4 mb-7">
               <div className="h-px w-10 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.44em] text-white/50">
+              <span className="text-[10px] font-medium uppercase tracking-[0.44em] text-white">
                 What We Do
               </span>
             </div>
@@ -71,7 +71,7 @@ export default function ServicesGrid() {
               </span>
             </h2>
           </div>
-          <p className="text-white/45 text-[14px] font-light leading-[1.78] tracking-wide max-w-[360px] sm:pb-2">
+          <p className="text-white text-[14px] font-light leading-[1.78] tracking-wide max-w-[360px] sm:pb-2">
             Five services. One standard.<br />
             BC and Alberta since 1994.
           </p>
@@ -112,7 +112,7 @@ export default function ServicesGrid() {
                 />
 
                 {/* Index */}
-                <span className="absolute bottom-6 left-6 font-mono text-[9px] tracking-[0.32em] text-white/22">
+                <span className="absolute bottom-6 left-6 font-mono text-[9px] tracking-[0.32em] text-white">
                   {s.num}
                 </span>
               </div>
@@ -149,7 +149,7 @@ export default function ServicesGrid() {
                   </h3>
 
                   {/* Sub */}
-                  <p className="text-white/25 text-[9px] font-medium uppercase tracking-[0.3em] mb-8">
+                  <p className="text-white text-[9px] font-medium uppercase tracking-[0.3em] mb-8">
                     {s.sub}
                   </p>
 
@@ -157,12 +157,12 @@ export default function ServicesGrid() {
                   <div className="w-12 h-px bg-white/[0.08] mb-8" />
 
                   {/* Body */}
-                  <p className="text-white/50 text-[14px] font-light leading-[1.86] tracking-wide max-w-[400px] mb-10">
+                  <p className="text-white text-[14px] font-light leading-[1.86] tracking-wide max-w-[400px] mb-10">
                     {s.body}
                   </p>
 
                   {/* CTA */}
-                  <div className="flex items-center gap-3 text-white/25 group-hover:text-white/60 transition-colors duration-300">
+                  <div className="flex items-center gap-3 text-white group-hover:text-white transition-colors duration-300">
                     <span className="text-[9px] font-semibold uppercase tracking-[0.38em]">
                       Learn More
                     </span>

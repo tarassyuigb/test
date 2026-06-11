@@ -21,7 +21,7 @@ export default function PhotoShowcase({ photos }: { photos: [Photo, Photo, Photo
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/28 via-transparent to-transparent" />
             <div className="absolute bottom-4 right-5">
-              <span className="font-mono text-[8px] tracking-[0.22em] text-white/18">01</span>
+              <span className="font-mono text-[8px] tracking-[0.22em] text-white">01</span>
             </div>
           </div>
 
@@ -36,7 +36,7 @@ export default function PhotoShowcase({ photos }: { photos: [Photo, Photo, Photo
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/22 via-transparent to-transparent" />
                 <div className="absolute bottom-3 right-4">
-                  <span className="font-mono text-[8px] tracking-[0.22em] text-white/18">
+                  <span className="font-mono text-[8px] tracking-[0.22em] text-white">
                     0{i + 2}
                   </span>
                 </div>

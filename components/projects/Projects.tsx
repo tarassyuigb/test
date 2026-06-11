@@ -180,7 +180,7 @@ function ProjectCard({
 
         {/* ── Top bar ── */}
         <div className="absolute top-0 inset-x-0 flex items-start justify-between p-5 sm:p-6 lg:p-7">
-          <span className="font-mono text-[10px] tracking-[0.25em] text-white/22">
+          <span className="font-mono text-[10px] tracking-[0.25em] text-white">
             {project.num}
           </span>
           <motion.span
@@ -213,7 +213,7 @@ function ProjectCard({
                   <span className="font-display font-black text-white leading-none tracking-tight text-2xl">
                     {stat.value}
                   </span>
-                  <span className="text-white/35 text-[9.5px] font-medium uppercase tracking-[0.26em]">
+                  <span className="text-white text-[9.5px] font-medium uppercase tracking-[0.26em]">
                     {stat.label}
                   </span>
                 </div>
@@ -225,7 +225,7 @@ function ProjectCard({
           <AnimatePresence>
             {hovered && (
               <motion.p
-                className="text-white/50 text-[12.5px] font-light leading-relaxed tracking-wide mb-5 max-w-[480px]"
+                className="text-white text-[12.5px] font-light leading-relaxed tracking-wide mb-5 max-w-[480px]"
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 6 }}
@@ -265,11 +265,11 @@ function ProjectCard({
             transition={{ delay: 0.28, duration: 0.7, ease: EASE }}
           >
             <div className="w-[3px] h-3 bg-[#14008B] shrink-0" />
-            <span className="text-white/38 text-[10px] font-medium uppercase tracking-[0.24em]">
+            <span className="text-white text-[10px] font-medium uppercase tracking-[0.24em]">
               {project.location}
             </span>
-            <span className="text-white/15 text-[9px]">·</span>
-            <span className="text-white/26 text-[10px] tracking-[0.18em]">
+            <span className="text-white text-[9px]">·</span>
+            <span className="text-white text-[10px] tracking-[0.18em]">
               {project.year}
             </span>
           </motion.div>
@@ -323,7 +323,7 @@ export default function Projects() {
               transition={{ duration: 0.72, ease: EASE }}
             >
               <div className="h-px w-10 shrink-0 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                 Recent Work
               </span>
             </motion.div>
@@ -346,7 +346,7 @@ export default function Projects() {
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.82, ease: EASE }}
           >
-            <p className="text-white/38 text-[13.5px] font-light leading-[1.72] tracking-wide max-w-[260px] sm:text-right">
+            <p className="text-white text-[13.5px] font-light leading-[1.72] tracking-wide max-w-[260px] sm:text-right">
               A selection of exterior transformations across BC and Alberta.
             </p>
 
@@ -355,7 +355,7 @@ export default function Projects() {
               {["Commercial", "Residential", "Multifamily"].map((cat) => (
                 <span
                   key={cat}
-                  className="text-[9.5px] font-medium uppercase tracking-[0.28em] text-white/20 border border-white/[0.07] px-3 py-1"
+                  className="text-[9.5px] font-medium uppercase tracking-[0.28em] text-white border border-white/[0.07] px-3 py-1"
                 >
                   {cat}
                 </span>
@@ -364,7 +364,7 @@ export default function Projects() {
 
             <Link
               href="/projects"
-              className="group inline-flex items-center gap-3 text-white/36 text-[11px] font-semibold uppercase tracking-[0.28em] hover:text-white transition-colors duration-300"
+              className="group inline-flex items-center gap-3 text-white text-[11px] font-semibold uppercase tracking-[0.28em] hover:text-white transition-colors duration-300"
             >
               <span className="relative">
                 View All Projects
@@ -435,14 +435,14 @@ export default function Projects() {
         >
           <div className="flex items-center gap-3">
             <div className="h-[13px] w-px bg-[#14008B]" />
-            <span className="text-white/20 text-[10px] font-medium uppercase tracking-[0.34em]">
+            <span className="text-white text-[10px] font-medium uppercase tracking-[0.34em]">
               Showing 4 of 40+ Projects
             </span>
           </div>
 
           <Link
             href="/projects"
-            className="group inline-flex items-center gap-2 text-white/20 text-[10px] font-medium uppercase tracking-[0.3em] hover:text-white/55 transition-colors duration-300"
+            className="group inline-flex items-center gap-2 text-white text-[10px] font-medium uppercase tracking-[0.3em] hover:text-white transition-colors duration-300"
           >
             <span>View Full Portfolio</span>
             <svg

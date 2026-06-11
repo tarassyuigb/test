@@ -39,3 +39,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# large video files (host on Cloudflare/CDN instead)
+public/videos/
+public/*.mp4
+public/**/*.mp4
+
+# raw upload dumps
+public/drive-download-*/
+public/IMG_*.jpg
+public/IMG_*.JPG
+public/IMG_*.jpeg
+public/"File 2017*"

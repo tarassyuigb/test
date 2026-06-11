@@ -26,13 +26,13 @@ const SUPPLIERS = [
       "High-performance fiber cement siding built for the durability demands of Canadian climate.",
   },
   {
-    id: "fisher",
+    id: "woodtone",
     num: "03",
-    name: "Fisher",
-    logo: "/images/logos/fisher.svg",
-    category: "Regional Supply",
+    name: "Woodtone",
+    logo: "",
+    category: "Wood Finishing",
     description:
-      "Trusted exterior supply partner — ensuring product availability across every market we operate.",
+      "Premium factory-finished wood and composite cladding systems — pre-coated for lasting colour integrity and dimensional stability.",
   },
   {
     id: "convoy",
@@ -130,12 +130,18 @@ function SupplierCard({
             transition: "opacity 0.28s ease",
           }}
         >
-          <img
-            src={supplier.logo}
-            alt={supplier.name}
-            className="max-h-full max-w-[180px] object-contain object-left"
-            style={{ filter: "brightness(0) invert(1)" }}
-          />
+          {supplier.logo ? (
+            <img
+              src={supplier.logo}
+              alt={supplier.name}
+              className="max-h-full max-w-[180px] object-contain object-left"
+              style={{ filter: "brightness(0) invert(1)" }}
+            />
+          ) : (
+            <span className="font-display font-black uppercase tracking-[0.06em] text-white" style={{ fontSize: "22px" }}>
+              {supplier.name}
+            </span>
+          )}
         </div>
 
         {/* Animated underline */}
@@ -147,7 +153,7 @@ function SupplierCard({
 
         {/* Description — reveals on hover */}
         <motion.p
-          className="text-white/40 text-[12.5px] font-light leading-relaxed tracking-wide mt-4"
+          className="text-white text-[12.5px] font-light leading-relaxed tracking-wide mt-4"
           animate={{ opacity: isHovered ? 1 : 0, y: isHovered ? 0 : 8 }}
           transition={{ duration: 0.32, delay: isHovered ? 0.06 : 0, ease: EASE }}
         >
@@ -190,7 +196,7 @@ export default function SuppliersGrid() {
               transition={{ duration: 0.72, ease: EASE }}
             >
               <div className="h-px w-10 shrink-0 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                 Trusted Partners
               </span>
             </motion.div>
@@ -205,7 +211,7 @@ export default function SuppliersGrid() {
             </motion.h2>
           </div>
           <motion.p
-            className="text-white/40 text-[14px] font-light leading-[1.74] tracking-wide max-w-[340px] lg:text-right"
+            className="text-white text-[14px] font-light leading-[1.74] tracking-wide max-w-[340px] lg:text-right"
             initial={{ opacity: 0, y: 16 }}
             animate={headerInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.2, duration: 0.82, ease: EASE }}

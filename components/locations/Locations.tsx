@@ -41,23 +41,11 @@ const CITIES: City[] = [
     province: "British Columbia",
     region: "North Okanagan",
     description:
-      "Home of our North Okanagan office since 1994. Serving Vernon, Coldstream, and Armstrong with the full residential and commercial exterior scope.",
+      "Home of our North Okanagan office since 1994. Serving Vernon, Coldstream, Armstrong, Enderby, and the upper North Okanagan with the full residential and commercial exterior scope.",
     href: "/locations/vernon",
     x: 28, y: 54,
     labelSide: "right",
     pulseDelay: 0.4,
-  },
-  {
-    id: "enderby",
-    name: "Enderby",
-    province: "British Columbia",
-    region: "North Okanagan",
-    description:
-      "Serving Enderby, Armstrong, Coldstream, and Spallumcheen — the geographic centre of our BC service area.",
-    href: "/locations/enderby",
-    x: 36, y: 40,
-    labelSide: "right",
-    pulseDelay: 0.8,
   },
   {
     id: "salmon-arm",
@@ -101,9 +89,8 @@ type Connection = { from: string; to: string; dashed?: boolean }
 
 const CONNECTIONS: Connection[] = [
   { from: "kelowna", to: "vernon" },
-  { from: "vernon", to: "enderby" },
-  { from: "enderby", to: "salmon-arm" },
-  { from: "enderby", to: "revelstoke" },
+  { from: "vernon", to: "salmon-arm" },
+  { from: "salmon-arm", to: "revelstoke" },
   { from: "revelstoke", to: "calgary", dashed: true },
 ]
 
@@ -193,7 +180,7 @@ function CityHotspot({
           {city.name}
         </motion.span>
         <motion.span
-          className="block text-[8.5px] tracking-[0.16em] mt-[3px] leading-none text-white/35"
+          className="block text-[8.5px] tracking-[0.16em] mt-[3px] leading-none text-white"
           animate={{ opacity: isActive ? 1 : 0 }}
           transition={{ duration: 0.22 }}
         >
@@ -210,10 +197,10 @@ function CityInfoPanel({ city }: { city: City | null }) {
   if (!city) {
     return (
       <div className="py-2">
-        <p className="text-white/22 text-[11px] font-medium uppercase tracking-[0.34em] mb-3">
+        <p className="text-white text-[11px] font-medium uppercase tracking-[0.34em] mb-3">
           Select a location
         </p>
-        <p className="text-white/18 text-sm font-light leading-relaxed max-w-[280px]">
+        <p className="text-white text-sm font-light leading-relaxed max-w-[280px]">
           Hover a city on the map to explore our services in that area.
         </p>
       </div>
@@ -234,7 +221,7 @@ function CityInfoPanel({ city }: { city: City | null }) {
       >
         {city.name}
       </h3>
-      <p className="text-white/48 text-[14px] font-light leading-[1.74] tracking-wide max-w-[320px] mb-8">
+      <p className="text-white text-[14px] font-light leading-[1.74] tracking-wide max-w-[320px] mb-8">
         {city.description}
       </p>
       <Link
@@ -446,7 +433,7 @@ export default function Locations() {
               transition={{ duration: 0.72, ease: EASE }}
             >
               <div className="h-px w-10 shrink-0 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                 Where We Work
               </span>
             </motion.div>
@@ -464,7 +451,7 @@ export default function Locations() {
 
             {/* Intro */}
             <motion.p
-              className="text-white/44 text-[14.5px] font-light leading-[1.72] tracking-wide max-w-[320px] mb-12"
+              className="text-white text-[14.5px] font-light leading-[1.72] tracking-wide max-w-[320px] mb-12"
               initial={{ opacity: 0, y: 16 }}
               animate={headerInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.2, duration: 0.82, ease: EASE }}
@@ -486,7 +473,7 @@ export default function Locations() {
                   className={`px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.2em] border transition-all duration-200 ${
                     activeCity === city.id
                       ? "border-[#14008B] bg-[#14008B]/20 text-white"
-                      : "border-white/10 text-white/40 hover:border-white/25 hover:text-white/65"
+                      : "border-white/10 text-white hover:border-white/25 hover:text-white"
                   }`}
                 >
                   {city.name}
@@ -523,7 +510,7 @@ export default function Locations() {
             >
               <Link
                 href="/locations"
-                className="group inline-flex items-center gap-3 text-white/38 text-[11px] font-semibold uppercase tracking-[0.28em] hover:text-white transition-colors duration-300"
+                className="group inline-flex items-center gap-3 text-white text-[11px] font-semibold uppercase tracking-[0.28em] hover:text-white transition-colors duration-300"
               >
                 <span className="relative">
                   View All Locations

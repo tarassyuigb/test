@@ -61,7 +61,7 @@ const SERVICE_SCHEMA = {
     telephone: "+12508320610",
     url: "https://www.streamlineexteriors.ca",
   },
-  areaServed: ["Kelowna", "Vernon", "Salmon Arm", "Enderby", "Revelstoke", "Calgary"],
+  areaServed: ["Kelowna", "Vernon", "Salmon Arm", "Revelstoke", "Calgary"],
   description:
     "Complete exterior renovation including siding replacement, Gentek-certified window and door installation, soffits, fascia, sundecks, railings, and design visualization. One of only 200 Gentek premium renovators in Canada.",
   serviceType: "Exterior Renovation",
@@ -104,7 +104,7 @@ export default function RenovationPage() {
         <div className="relative max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-28">
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px w-10 bg-[#14008B]" />
-            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
               Exterior Renovation · Full Scope
             </span>
           </div>
@@ -123,7 +123,7 @@ export default function RenovationPage() {
               Reimagined.
             </span>
           </h1>
-          <p className="text-white/45 text-[15px] font-light leading-[1.72] tracking-wide max-w-[560px] mb-10">
+          <p className="text-white text-[15px] font-light leading-[1.72] tracking-wide max-w-[560px] mb-10">
             {service.summary}
           </p>
 
@@ -133,13 +133,13 @@ export default function RenovationPage() {
               { v: "#200", l: "Gentek Premium Renovators" },
               { v: "30+", l: "Years Full Renovation" },
               { v: "6", l: "Service Locations" },
-              { v: "$15M", l: "Liability Coverage" },
+              { v: "$10M", l: "Liability Coverage" },
             ].map((s) => (
               <div key={s.l}>
                 <p className="font-display font-black text-white uppercase leading-none tracking-[-0.02em] mb-1" style={{ fontSize: "clamp(16px, 2vw, 28px)" }}>
                   {s.v}
                 </p>
-                <p className="text-white/32 text-[10px] font-medium uppercase tracking-[0.26em]">{s.l}</p>
+                <p className="text-white text-[10px] font-medium uppercase tracking-[0.26em]">{s.l}</p>
               </div>
             ))}
           </div>
@@ -159,7 +159,7 @@ export default function RenovationPage() {
             </Link>
             <a
               href={BUSINESS.phone.primaryHref}
-              className="inline-flex items-center gap-3 border border-white/[0.1] px-8 py-5 text-[11.5px] font-semibold uppercase tracking-[0.24em] text-white/50 hover:text-white hover:border-white/25 transition-all duration-300"
+              className="inline-flex items-center gap-3 border border-white/[0.1] px-8 py-5 text-[11.5px] font-semibold uppercase tracking-[0.24em] text-white hover:text-white hover:border-white/25 transition-all duration-300"
             >
               {BUSINESS.phone.primary}
             </a>
@@ -173,7 +173,7 @@ export default function RenovationPage() {
           <FadeIn>
           <div className="flex items-center gap-4 mb-14">
             <div className="h-px w-10 bg-[#14008B]" />
-            <h2 className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+            <h2 className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
               Renovation Scope
             </h2>
           </div>
@@ -181,14 +181,14 @@ export default function RenovationPage() {
             {/* Featured first card — Siding Replacement is the primary renovation scope */}
             <div className="sm:col-span-2 bg-black p-8 lg:p-10 hover:bg-[#030018] transition-colors duration-300">
               <div className="flex items-center gap-3 mb-5">
-                <span className="font-mono text-[9px] tracking-[0.28em] text-white/14">01</span>
+                <span className="font-mono text-[9px] tracking-[0.28em] text-white">01</span>
                 <div className="h-px flex-1 bg-white/[0.06]" />
                 <span className="text-[9px] font-semibold uppercase tracking-[0.32em] text-[#14008B] opacity-60">Primary Scope</span>
               </div>
               <h3 className="font-display font-bold text-white uppercase text-[18px] tracking-[0.05em] mb-4">
                 {RENO_SCOPE[0].name}
               </h3>
-              <p className="text-white/38 text-[13px] font-light leading-relaxed tracking-wide max-w-[660px]">
+              <p className="text-white text-[13px] font-light leading-relaxed tracking-wide max-w-[660px]">
                 {RENO_SCOPE[0].body}
               </p>
             </div>
@@ -197,13 +197,13 @@ export default function RenovationPage() {
             {RENO_SCOPE.slice(1).map((rs, i) => (
               <div key={i} className="bg-black p-8 lg:p-9 hover:bg-[#030018] transition-colors duration-300">
                 <div className="flex items-center gap-3 mb-5">
-                  <span className="font-mono text-[9px] tracking-[0.28em] text-white/14">0{i + 2}</span>
+                  <span className="font-mono text-[9px] tracking-[0.28em] text-white">0{i + 2}</span>
                   <div className="h-px flex-1 bg-white/[0.06]" />
                 </div>
                 <h3 className="font-display font-bold text-white uppercase text-[14px] tracking-[0.06em] mb-4">
                   {rs.name}
                 </h3>
-                <p className="text-white/38 text-[12.5px] font-light leading-relaxed tracking-wide">
+                <p className="text-white text-[12.5px] font-light leading-relaxed tracking-wide">
                   {rs.body}
                 </p>
               </div>
@@ -227,39 +227,39 @@ export default function RenovationPage() {
             <div>
               <div className="flex items-center gap-4 mb-8">
                 <div className="h-px w-10 bg-[#14008B]" />
-                <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+                <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                   The Standard
                 </span>
               </div>
               {service.description.split("\n\n").map((para, i) => (
-                <p key={i} className="text-white/40 text-[14px] font-light leading-[1.78] tracking-wide mb-5 last:mb-0">
+                <p key={i} className="text-white text-[14px] font-light leading-[1.78] tracking-wide mb-5 last:mb-0">
                   {para}
                 </p>
               ))}
             </div>
             <div className="space-y-6">
               <div className="border border-white/[0.06] p-7">
-                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white/26 mb-6">
+                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white mb-6">
                   Every Renovation Includes
                 </p>
                 <ul className="space-y-4">
                   {service.keyPoints.map((pt, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-[3px] h-[3px] rounded-full bg-[#14008B] mt-[7px] shrink-0" />
-                      <span className="text-white/42 text-[13px] font-light leading-relaxed tracking-wide">{pt}</span>
+                      <span className="text-white text-[13px] font-light leading-relaxed tracking-wide">{pt}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="border border-white/[0.06] p-7">
-                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white/26 mb-6">
+                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white mb-6">
                   Credentials
                 </p>
                 <ul className="space-y-3">
                   {CREDENTIALS.slice(0, 4).map((c, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-[3px] h-[3px] rounded-full bg-[#14008B] mt-[7px] shrink-0" />
-                      <span className="text-white/35 text-[11.5px] font-light leading-relaxed tracking-wide">{c}</span>
+                      <span className="text-white text-[11.5px] font-light leading-relaxed tracking-wide">{c}</span>
                     </li>
                   ))}
                 </ul>
@@ -278,7 +278,7 @@ export default function RenovationPage() {
               <p className="font-display font-black text-white uppercase tracking-[-0.01em] mb-1.5" style={{ fontSize: "clamp(18px, 2.2vw, 28px)" }}>
                 See your exterior reimagined — free
               </p>
-              <p className="text-white/35 text-[11.5px] font-light tracking-wide">
+              <p className="text-white text-[11.5px] font-light tracking-wide">
                 Computer-rendered visualization included · Gentek certified · One of 200 in Canada
               </p>
             </div>
@@ -297,7 +297,7 @@ export default function RenovationPage() {
               </Link>
               <a
                 href={BUSINESS.phone.primaryHref}
-                className="inline-flex items-center justify-center border border-white/[0.1] px-7 py-3.5 text-[10.5px] font-semibold uppercase tracking-[0.24em] text-white/50 hover:text-white hover:border-white/25 transition-all duration-300"
+                className="inline-flex items-center justify-center border border-white/[0.1] px-7 py-3.5 text-[10.5px] font-semibold uppercase tracking-[0.24em] text-white hover:text-white hover:border-white/25 transition-all duration-300"
               >
                 {BUSINESS.phone.primary}
               </a>
@@ -319,7 +319,7 @@ export default function RenovationPage() {
           <div className="max-w-[540px]">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-10 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                 Free Consultation
               </span>
             </div>
@@ -333,7 +333,7 @@ export default function RenovationPage() {
                 You Build It.
               </span>
             </h2>
-            <p className="text-white/40 text-[14px] font-light leading-[1.72] tracking-wide">
+            <p className="text-white text-[14px] font-light leading-[1.72] tracking-wide">
               We photograph your property and render the finished result before any commitment. No obligation — just clarity.
             </p>
           </div>
@@ -351,8 +351,8 @@ export default function RenovationPage() {
               </span>
             </Link>
             <div className="pt-2 border-t border-white/[0.06]">
-              <p className="text-white/20 text-[10px] uppercase tracking-[0.3em] mb-2">Or call directly</p>
-              <a href={BUSINESS.phone.primaryHref} className="text-white/45 text-[13px] tracking-wide hover:text-white transition-colors duration-300">
+              <p className="text-white text-[10px] uppercase tracking-[0.3em] mb-2">Or call directly</p>
+              <a href={BUSINESS.phone.primaryHref} className="text-white text-[13px] tracking-wide hover:text-white transition-colors duration-300">
                 {BUSINESS.phone.primary}
               </a>
             </div>

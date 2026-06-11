@@ -42,7 +42,7 @@ export default async function CityPage({ params }: Props) {
   const cityProjects = PROJECTS.filter((p) => p.city === city.slug)
 
   // Show Vernon office number for Okanagan cities
-  const OKANAGAN_CITIES = ["kelowna", "vernon", "enderby"]
+  const OKANAGAN_CITIES = ["kelowna", "vernon"]
   const phone = OKANAGAN_CITIES.includes(city.slug)
     ? { number: BUSINESS.phone.vernon, href: BUSINESS.phone.vernonHref }
     : { number: BUSINESS.phone.primary, href: BUSINESS.phone.primaryHref }
@@ -98,12 +98,12 @@ export default async function CityPage({ params }: Props) {
           <div className="flex items-center gap-2 mb-10">
             <Link
               href="/locations"
-              className="text-white/28 text-[10px] font-medium uppercase tracking-[0.34em] hover:text-white/55 transition-colors"
+              className="text-white text-[10px] font-medium uppercase tracking-[0.34em] hover:text-white transition-colors"
             >
               Locations
             </Link>
-            <span className="text-white/14 text-[9px]">·</span>
-            <span className="text-white/45 text-[10px] font-medium uppercase tracking-[0.34em]">
+            <span className="text-white text-[9px]">·</span>
+            <span className="text-white text-[10px] font-medium uppercase tracking-[0.34em]">
               {city.name}
             </span>
           </div>
@@ -111,7 +111,7 @@ export default async function CityPage({ params }: Props) {
           {/* Province tag */}
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px w-10 bg-[#14008B]" />
-            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
               {city.region} · {city.provinceCode}
             </span>
           </div>
@@ -134,7 +134,7 @@ export default async function CityPage({ params }: Props) {
           </h1>
 
           {/* Description */}
-          <p className="text-white/45 text-[15px] font-light leading-[1.72] tracking-wide max-w-[560px] mb-10">
+          <p className="text-white text-[15px] font-light leading-[1.72] tracking-wide max-w-[560px] mb-10">
             {city.longDescription.split("\n\n")[0]}
           </p>
 
@@ -154,7 +154,7 @@ export default async function CityPage({ params }: Props) {
             </Link>
             <a
               href={phone.href}
-              className="inline-flex items-center gap-3 border border-white/[0.1] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/50 hover:text-white hover:border-white/25 transition-all duration-300"
+              className="inline-flex items-center gap-3 border border-white/[0.1] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-white hover:text-white hover:border-white/25 transition-all duration-300"
             >
               <svg width="13" height="13" viewBox="0 0 24 24" fill="none">
                 <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92v2z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
@@ -174,23 +174,23 @@ export default async function CityPage({ params }: Props) {
               <div>
                 <div className="flex items-center gap-4 mb-6">
                   <div className="h-px w-10 bg-[#14008B]" />
-                  <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+                  <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                     About This Location
                   </span>
                 </div>
-                <p className="text-white/42 text-[14.5px] font-light leading-[1.78] tracking-wide">
+                <p className="text-white text-[14.5px] font-light leading-[1.78] tracking-wide">
                   {city.longDescription.split("\n\n")[1]}
                 </p>
               </div>
               <div className="border border-white/[0.06] p-8">
-                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white/26 mb-6">
+                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white mb-6">
                   Why {city.name} Chooses Streamline
                 </p>
                 <ul className="space-y-4">
                   {city.highlights.map((h, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-[3px] h-[3px] rounded-full bg-[#14008B] mt-[7px] shrink-0" />
-                      <span className="text-white/42 text-[13px] font-light leading-relaxed tracking-wide">
+                      <span className="text-white text-[13px] font-light leading-relaxed tracking-wide">
                         {h}
                       </span>
                     </li>
@@ -209,7 +209,7 @@ export default async function CityPage({ params }: Props) {
           <FadeIn>
           <div className="flex items-center gap-4 mb-12">
             <div className="h-px w-10 bg-[#14008B]" />
-            <h2 className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+            <h2 className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
               Services in {city.name}
             </h2>
           </div>
@@ -222,7 +222,7 @@ export default async function CityPage({ params }: Props) {
                 className="group relative bg-black p-8 lg:p-10 hover:bg-[#030018] transition-colors duration-300"
               >
                 <div className="flex items-start justify-between gap-4 mb-5">
-                  <span className="font-mono text-[9px] tracking-[0.28em] text-white/14">
+                  <span className="font-mono text-[9px] tracking-[0.28em] text-white">
                     0{i + 1}
                   </span>
                   <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-[#14008B] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -230,12 +230,12 @@ export default async function CityPage({ params }: Props) {
                   </span>
                 </div>
                 <h3
-                  className="font-display font-black text-white/22 group-hover:text-white uppercase leading-[0.9] tracking-[-0.01em] mb-4 transition-colors duration-300"
+                  className="font-display font-black text-white group-hover:text-white uppercase leading-[0.9] tracking-[-0.01em] mb-4 transition-colors duration-300"
                   style={{ fontSize: "clamp(24px, 3vw, 40px)" }}
                 >
                   {service.name}
                 </h3>
-                <p className="text-white/32 lg:text-white/0 text-[12.5px] font-light leading-relaxed tracking-wide transition-colors duration-300 mb-5 lg:group-hover:text-white/65">
+                <p className="text-white lg:text-white text-[12.5px] font-light leading-relaxed tracking-wide transition-colors duration-300 mb-5 lg:group-hover:text-white">
                   {service.summary}
                 </p>
                 <div className="flex items-center gap-2 text-[#14008B] text-[10px] font-semibold uppercase tracking-[0.3em]">
@@ -260,7 +260,7 @@ export default async function CityPage({ params }: Props) {
             <FadeIn>
               <div className="flex items-center gap-4 mb-12">
                 <div className="h-px w-10 bg-[#14008B]" />
-                <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+                <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                   Recent Work in {city.name}
                 </span>
               </div>
@@ -276,19 +276,19 @@ export default async function CityPage({ params }: Props) {
                       <span className="text-[9px] font-semibold uppercase tracking-[0.32em] text-[#14008B] opacity-60">
                         {project.category}
                       </span>
-                      <span className="font-mono text-[9px] tracking-[0.28em] text-white/10 group-hover:text-white/20 transition-colors duration-300">
+                      <span className="font-mono text-[9px] tracking-[0.28em] text-white group-hover:text-white transition-colors duration-300">
                         {project.year}
                       </span>
                     </div>
 
                     <h3
-                      className="font-display font-black text-white/25 group-hover:text-white uppercase leading-[0.9] tracking-[-0.01em] mb-5 transition-colors duration-300"
+                      className="font-display font-black text-white group-hover:text-white uppercase leading-[0.9] tracking-[-0.01em] mb-5 transition-colors duration-300"
                       style={{ fontSize: "clamp(20px, 2.4vw, 32px)" }}
                     >
                       {project.title}
                     </h3>
 
-                    <p className="text-white/28 text-[11px] font-light uppercase tracking-[0.28em] mb-5">
+                    <p className="text-white text-[11px] font-light uppercase tracking-[0.28em] mb-5">
                       {project.location}
                     </p>
 
@@ -296,7 +296,7 @@ export default async function CityPage({ params }: Props) {
                       {project.scope.slice(0, 3).map((item, i) => (
                         <li key={i} className="flex items-start gap-2.5">
                           <div className="w-[3px] h-[3px] rounded-full bg-[#14008B] mt-[5px] shrink-0" />
-                          <span className="text-white/32 text-[12px] font-light leading-snug tracking-wide">
+                          <span className="text-white text-[12px] font-light leading-snug tracking-wide">
                             {item}
                           </span>
                         </li>
@@ -329,7 +329,7 @@ export default async function CityPage({ params }: Props) {
           <div className="max-w-[560px]">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-10 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                 {city.name} Projects
               </span>
             </div>
@@ -348,7 +348,7 @@ export default async function CityPage({ params }: Props) {
                 {city.name} Project.
               </span>
             </h2>
-            <p className="text-white/40 text-[14px] font-light leading-[1.72] tracking-wide">
+            <p className="text-white text-[14px] font-light leading-[1.72] tracking-wide">
               Free estimates for all exterior services in {city.name} and surrounding{" "}
               {city.region} communities.
             </p>
@@ -367,10 +367,10 @@ export default async function CityPage({ params }: Props) {
               </span>
             </Link>
             <div className="pt-2 border-t border-white/[0.06]">
-              <p className="text-white/20 text-[10px] uppercase tracking-[0.3em] mb-2">Or call directly</p>
+              <p className="text-white text-[10px] uppercase tracking-[0.3em] mb-2">Or call directly</p>
               <a
                 href={phone.href}
-                className="text-white/45 text-[13px] tracking-wide hover:text-white transition-colors duration-300"
+                className="text-white text-[13px] tracking-wide hover:text-white transition-colors duration-300"
               >
                 {phone.number}
               </a>

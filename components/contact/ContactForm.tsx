@@ -15,7 +15,7 @@ type FormState = {
 const SERVICES = [
   "Residential Exterior",
   "Commercial / Multifamily",
-  "Gutters & Drainage",
+  "Gutters & Leaf-guards",
   "Full Renovation",
   "Windows & Doors",
   "Other / Not Sure",
@@ -25,17 +25,16 @@ const LOCATIONS = [
   "Kelowna, BC",
   "Vernon, BC",
   "Salmon Arm, BC",
-  "Enderby, BC",
   "Revelstoke, BC",
   "Calgary, AB",
   "Other",
 ]
 
 const INPUT_BASE =
-  "w-full bg-transparent border border-white/[0.1] px-4 py-3.5 text-white/80 text-[13px] font-light tracking-wide placeholder:text-white/22 focus:outline-none focus:border-[#14008B] transition-colors duration-200"
+  "w-full bg-transparent border border-white/[0.1] px-4 py-3.5 text-white text-[13px] font-light tracking-wide placeholder:text-white focus:outline-none focus:border-[#14008B] transition-colors duration-200"
 
 const LABEL_BASE =
-  "block text-[9.5px] font-semibold uppercase tracking-[0.36em] text-white/30 mb-2.5"
+  "block text-[9.5px] font-semibold uppercase tracking-[0.36em] text-white mb-2.5"
 
 export default function ContactForm() {
   const [form, setForm] = useState<FormState>({
@@ -71,7 +70,7 @@ export default function ContactForm() {
       <div className="border border-white/[0.07] p-12 flex flex-col items-start gap-6">
         <div className="flex items-center gap-4">
           <div className="h-px w-10 bg-[#14008B]" />
-          <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+          <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
             Message Received
           </span>
         </div>
@@ -85,12 +84,12 @@ export default function ContactForm() {
             In Touch.
           </span>
         </h3>
-        <p className="text-white/38 text-[13.5px] font-light leading-relaxed tracking-wide max-w-[400px]">
+        <p className="text-white text-[13.5px] font-light leading-relaxed tracking-wide max-w-[400px]">
           Thank you for reaching out. One of our team members will contact you within one business day to discuss your project.
         </p>
         <button
           onClick={() => { setSubmitted(false); setForm({ name: "", company: "", phone: "", email: "", location: "", service: "", message: "" }) }}
-          className="text-white/30 text-[11px] uppercase tracking-[0.28em] hover:text-white transition-colors duration-200 mt-2"
+          className="text-white text-[11px] uppercase tracking-[0.28em] hover:text-white transition-colors duration-200 mt-2"
         >
           Send another message →
         </button>
@@ -205,7 +204,7 @@ export default function ContactForm() {
       </div>
 
       <div className="pt-2 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-5">
-        <p className="text-white/20 text-[11px] font-light tracking-wide">
+        <p className="text-white text-[11px] font-light tracking-wide">
           We respond within one business day.
         </p>
         <button

@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     template: "%s | Streamline Exteriors",
   },
   description:
-    "Premium residential and commercial exterior solutions across BC and Alberta since 1994. Siding, gutters, windows, and renovation. Serving Kelowna, Vernon, Salmon Arm, Revelstoke, Enderby, and Calgary.",
+    "Premium residential and commercial exterior solutions across BC and Alberta since 1994. Siding, gutters, windows, and renovation. Serving Kelowna, Vernon, Salmon Arm, Revelstoke, and Calgary.",
   keywords: [
     "exterior contractor BC",
     "siding contractor BC",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     "commercial exterior BC",
     "James Hardie installer BC",
     "LP SmartSide BC",
-    "GutterGlove distributor Canada",
+    "GutterGlove leaf guards",
     "exterior contractor Alberta",
     "Streamline Exteriors",
   ],
@@ -97,7 +97,6 @@ const LOCAL_BUSINESS_SCHEMA = {
     { "@type": "City", name: "Kelowna" },
     { "@type": "City", name: "Vernon" },
     { "@type": "City", name: "Salmon Arm" },
-    { "@type": "City", name: "Enderby" },
     { "@type": "City", name: "Revelstoke" },
     { "@type": "City", name: "Calgary" },
   ],

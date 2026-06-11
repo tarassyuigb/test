@@ -93,7 +93,7 @@ function MegaMenu({ item }: { item: NavItem }) {
                   <motion.li key={sub.href} variants={rowVariants}>
                     <Link
                       href={sub.href}
-                      className="group flex items-center gap-2 text-white/55 text-[13.5px] tracking-wide hover:text-white transition-colors duration-200"
+                      className="group flex items-center gap-2 text-white text-[13.5px] tracking-wide hover:text-white transition-colors duration-200"
                     >
                       <span className="w-0 group-hover:w-3 h-px bg-white/50 transition-all duration-300 ease-out" />
                       {sub.label}
@@ -121,13 +121,13 @@ function MegaMenu({ item }: { item: NavItem }) {
               <h3 className="text-white font-black text-[32px] leading-[1.05] tracking-[-0.02em] uppercase whitespace-pre-line mb-4">
                 {item.featured.heading}
               </h3>
-              <p className="text-white/65 text-[13px] leading-relaxed tracking-wide max-w-[220px]">
+              <p className="text-white text-[13px] leading-relaxed tracking-wide max-w-[220px]">
                 {item.featured.sub}
               </p>
             </div>
             <Link
               href={item.featured.href}
-              className="group inline-flex items-center gap-3 text-white/70 text-[12px] font-medium tracking-[0.2em] uppercase hover:text-white transition-colors duration-200 mt-8"
+              className="group inline-flex items-center gap-3 text-white text-[12px] font-medium tracking-[0.2em] uppercase hover:text-white transition-colors duration-200 mt-8"
             >
               <span>{item.featured.cta}</span>
               <motion.span

@@ -11,7 +11,7 @@ const EASE: Ease4 = [0.22, 1, 0.36, 1]
 const STATS = [
   { value: "30+", label: "Years in Business" },
   { value: "#1", label: "GutterGlove Distributor" },
-  { value: "$15M", label: "Liability Insured" },
+  { value: "$10M", label: "Liability Insured" },
   { value: "100%", label: "Warranty Backed" },
 ]
 
@@ -76,7 +76,7 @@ export default function CTA() {
                 >
                   {stat.value}
                 </p>
-                <p className="text-white/35 text-[10.5px] font-medium uppercase tracking-[0.28em]">
+                <p className="text-white text-[10.5px] font-medium uppercase tracking-[0.28em]">
                   {stat.label}
                 </p>
               </motion.div>
@@ -98,7 +98,7 @@ export default function CTA() {
               transition={{ delay: 0.18, duration: 0.72, ease: EASE }}
             >
               <div className="h-px w-10 shrink-0 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                 Start Your Project
               </span>
             </motion.div>
@@ -129,7 +129,7 @@ export default function CTA() {
           {/* Right — copy + buttons */}
           <div className="flex flex-col gap-8 lg:min-w-[320px] xl:min-w-[360px] lg:pb-2">
             <motion.p
-              className="text-white/44 text-[15px] font-light leading-[1.72] tracking-wide max-w-[380px]"
+              className="text-white text-[15px] font-light leading-[1.72] tracking-wide max-w-[380px]"
               initial={{ opacity: 0, y: 18 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ delay: 0.52, duration: 0.85, ease: EASE }}
@@ -161,7 +161,7 @@ export default function CTA() {
               {/* Secondary */}
               <Link
                 href="/projects"
-                className="group inline-flex items-center justify-between gap-4 border border-white/[0.1] px-8 py-5 text-[11.5px] font-semibold uppercase tracking-[0.24em] text-white/50 hover:text-white hover:border-white/25 transition-all duration-300"
+                className="group inline-flex items-center justify-between gap-4 border border-white/[0.1] px-8 py-5 text-[11.5px] font-semibold uppercase tracking-[0.24em] text-white hover:text-white hover:border-white/25 transition-all duration-300"
               >
                 <span>View Projects</span>
                 <svg
@@ -174,12 +174,12 @@ export default function CTA() {
 
               {/* Phone */}
               <div className="pt-2 border-t border-white/[0.06]">
-                <p className="text-white/20 text-[10px] uppercase tracking-[0.3em] mb-2">
+                <p className="text-white text-[10px] uppercase tracking-[0.3em] mb-2">
                   Or call directly
                 </p>
                 <a
                   href={BUSINESS.phone.primaryHref}
-                  className="text-white/45 text-[13px] tracking-wide hover:text-white transition-colors duration-300"
+                  className="text-white text-[13px] tracking-wide hover:text-white transition-colors duration-300"
                 >
                   {BUSINESS.phone.primary}
                 </a>

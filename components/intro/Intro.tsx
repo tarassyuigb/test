@@ -20,7 +20,7 @@ const PILLARS = [
   {
     num: "03",
     title: "Warranty Backed",
-    body: "Standard 5-year warranty on all work. Lifetime warranty available. $15M liability insurance and continuous WCB coverage since 1994.",
+    body: "Standard 5-year warranty on all work. Lifetime warranty available. $10M liability insurance and continuous WCB coverage since 1994.",
   },
 ]
 
@@ -61,7 +61,7 @@ export default function Intro() {
               transition={{ delay: 0.1, duration: 0.72, ease: EASE }}
             >
               <div className="h-px w-10 shrink-0 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                 The Streamline Standard
               </span>
             </motion.div>
@@ -100,15 +100,15 @@ export default function Intro() {
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ delay: 0.44, duration: 0.88, ease: EASE }}
           >
-            <p className="text-white/40 text-[14.5px] font-light leading-[1.78] tracking-wide mb-8">
+            <p className="text-white text-[14.5px] font-light leading-[1.78] tracking-wide mb-8">
               Family owned since 1994 and the Okanagan–Shuswap's longest-serving
               exterior contractor. Every product specified for western Canadian
               climate. Every installation journeyman-led. Every project backed
-              by a standard 5-year warranty and $15M liability insurance.
+              by a standard 5-year warranty and $10M liability insurance.
             </p>
             <div className="flex items-center gap-3">
               <div className="h-px w-6 bg-[#14008B]" />
-              <span className="text-white/24 text-[10px] font-medium uppercase tracking-[0.38em]">
+              <span className="text-white text-[10px] font-medium uppercase tracking-[0.38em]">
                 BC & Alberta · Est. 1994
               </span>
             </div>
@@ -139,7 +139,7 @@ export default function Intro() {
                 transition={{ delay: 0.52 + i * 0.09, duration: 0.75, ease: EASE }}
               >
                 <div className="flex items-center gap-3 mb-5">
-                  <span className="font-mono text-[9px] tracking-[0.3em] text-white/14">
+                  <span className="font-mono text-[9px] tracking-[0.3em] text-white">
                     {p.num}
                   </span>
                   <div className="h-px flex-1 bg-white/[0.055]" />
@@ -147,7 +147,7 @@ export default function Intro() {
                 <h3 className="font-display font-bold text-white uppercase text-[13.5px] tracking-[0.07em] mb-3 leading-snug">
                   {p.title}
                 </h3>
-                <p className="text-white/34 text-[12.5px] font-light leading-relaxed tracking-wide">
+                <p className="text-white text-[12.5px] font-light leading-relaxed tracking-wide">
                   {p.body}
                 </p>
               </motion.div>

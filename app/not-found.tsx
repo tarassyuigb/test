@@ -15,7 +15,7 @@ export default function NotFound() {
 
         <div className="flex items-center gap-4 mb-10">
           <div className="h-px w-10 bg-[#14008B]" />
-          <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+          <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
             404 · Page Not Found
           </span>
         </div>
@@ -36,7 +36,7 @@ export default function NotFound() {
           </span>
         </h1>
 
-        <p className="text-white/42 text-[15px] font-light leading-[1.72] tracking-wide max-w-[460px] mb-12">
+        <p className="text-white text-[15px] font-light leading-[1.72] tracking-wide max-w-[460px] mb-12">
           The page you're looking for doesn't exist. Navigate back to our services or get in touch directly.
         </p>
 
@@ -55,14 +55,14 @@ export default function NotFound() {
           </Link>
           <Link
             href="/contact"
-            className="inline-flex items-center gap-3 border border-white/[0.1] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/50 hover:text-white hover:border-white/25 transition-all duration-300"
+            className="inline-flex items-center gap-3 border border-white/[0.1] px-8 py-4 text-[11px] font-semibold uppercase tracking-[0.24em] text-white hover:text-white hover:border-white/25 transition-all duration-300"
           >
             Contact Us
           </Link>
         </div>
 
         <div className="mt-16 pt-10 border-t border-white/[0.05]">
-          <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white/22 mb-6">
+          <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white mb-6">
             Quick Links
           </p>
           <div className="flex flex-wrap gap-x-8 gap-y-3">
@@ -77,7 +77,7 @@ export default function NotFound() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-white/35 text-[12px] font-light tracking-wide hover:text-white transition-colors duration-200"
+                className="text-white text-[12px] font-light tracking-wide hover:text-white transition-colors duration-200"
               >
                 {item.label}
               </Link>

@@ -6,7 +6,6 @@ const CITIES = [
   "kelowna",
   "vernon",
   "salmon-arm",
-  "enderby",
   "revelstoke",
   "calgary",
 ]
@@ -27,12 +26,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${BASE}/commercial`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE}/multifamily`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.9,

@@ -40,8 +40,8 @@ export const CREDENTIALS = [
   "LePage Quad Max Seal Certified",
   "Step Code Compliant Exterior Insulation",
   "Continuous WCB Coverage Since 1994",
-  "Canada's #1 GutterGlove Distributor",
-  "$15M Liability Insurance",
+  "Bonded",
+  "$10M Liability Insurance",
 ] as const
 
 // ─── Stats ────────────────────────────────────────────────────────────────────
@@ -227,7 +227,7 @@ export const CITIES: CityData[] = [
     shortDescription:
       "Our flagship Okanagan market. Residential and commercial exterior projects across the Central Okanagan Valley.",
     longDescription:
-      "Kelowna is Streamline Exteriors' primary Okanagan market — a region where the combination of hot summers, cold winters, and rapid residential development demands exterior systems that perform across climate extremes. From West Kelowna residential estates to downtown commercial facades, our teams have been active across the Central Okanagan for over three decades.\n\nWe install James Hardie, Allura, LP SmartSide, Longboard, and vinyl siding systems across the full range of Kelowna residential and commercial projects — backed by our standard warranty and $15M liability insurance.",
+      "Kelowna is Streamline Exteriors' primary Okanagan market — a region where the combination of hot summers, cold winters, and rapid residential development demands exterior systems that perform across climate extremes. From West Kelowna residential estates to downtown commercial facades, our teams have been active across the Central Okanagan for over three decades.\n\nWe install James Hardie, Allura, LP SmartSide, Longboard, and vinyl siding systems across the full range of Kelowna residential and commercial projects — backed by our standard warranty and $10M liability insurance.",
     highlights: [
       "Over 30 years of Okanagan exterior installations",
       "Residential and commercial siding, gutters, windows, doors",
@@ -261,10 +261,10 @@ export const CITIES: CityData[] = [
     shortDescription:
       "Home of our Vernon office. North Okanagan residential and commercial exterior services — serving the region since 1994.",
     longDescription:
-      "Vernon is one of Streamline Exteriors' two home bases — we've operated a Vernon office since the early years of the business. The North Okanagan's climate demands exterior systems with proven durability across the full seasonal range, and our Vernon-area crews have the regional knowledge to specify and install accordingly.\n\nWe serve Vernon, Coldstream, Armstrong, and the broader North Okanagan region with the full range of siding, gutter, window, door, and renovation services.",
+      "Vernon is one of Streamline Exteriors' two home bases — we've operated a Vernon office since the early years of the business. The North Okanagan's climate demands exterior systems with proven durability across the full seasonal range, and our Vernon-area crews have the regional knowledge to specify and install accordingly.\n\nWe serve Vernon, Coldstream, Armstrong, Enderby, Spallumcheen, and the broader North Okanagan region with the full range of siding, gutter, window, door, and renovation services.",
     highlights: [
       "Streamline Exteriors Vernon office — active since 1994",
-      "Serving Vernon, Coldstream, Armstrong, and surrounding areas",
+      "Serving Vernon, Coldstream, Armstrong, Enderby, and surrounding areas",
       "Full residential and commercial exterior scope",
       "100+ years combined crew experience",
     ],
@@ -316,38 +316,6 @@ export const CITIES: CityData[] = [
         "exterior contractor Shuswap",
         "eavestroughs Salmon Arm",
         "Hardie board siding Salmon Arm",
-      ],
-    },
-  },
-  {
-    id: "enderby",
-    slug: "enderby",
-    name: "Enderby",
-    province: "British Columbia",
-    provinceCode: "BC",
-    region: "North Okanagan",
-    shortDescription:
-      "Upper North Okanagan residential and commercial exterior installations — serving Enderby, Armstrong, Coldstream, and surrounding communities.",
-    longDescription:
-      "Enderby and the upper North Okanagan sit at the geographic centre of Streamline Exteriors' BC service area — connected to our Vernon and Salmon Arm bases, and close to the communities of Armstrong, Coldstream, and Spallumcheen.\n\nWe deliver the full range of residential and commercial exterior services to this region: James Hardie and LP SmartSide siding, continuous seamless gutters, GutterGlove leaf protection, window and door replacement, and full renovation packages.",
-    highlights: [
-      "Serving Enderby, Armstrong, Coldstream, and Spallumcheen",
-      "Full residential and commercial exterior scope",
-      "James Hardie and LP SmartSide certified installation",
-      "Same crews as our Vernon and Salmon Arm teams",
-    ],
-    services: ["residential", "commercial", "gutters", "renovation"],
-    seo: {
-      title: "Siding & Gutters Enderby BC | Exterior Contractor | Streamline Exteriors",
-      description:
-        "Exterior siding, gutters, and renovation in Enderby, BC and the upper North Okanagan. Serving Armstrong, Coldstream, and surrounding areas. Streamline Exteriors.",
-      keywords: [
-        "siding contractor Enderby BC",
-        "gutters Enderby BC",
-        "exterior renovation Enderby",
-        "siding installation Armstrong BC",
-        "exterior contractor North Okanagan",
-        "siding Coldstream BC",
       ],
     },
   },
@@ -863,11 +831,11 @@ export const SUPPLIERS = [
       "Roofing and exterior distribution specialists supporting our BC and Alberta operations with consistent product availability across all six locations.",
   },
   {
-    id: "fisher",
-    name: "Fisher",
-    category: "Regional Supply",
+    id: "woodtone",
+    name: "Woodtone",
+    category: "Wood Finishing",
     description:
-      "Trusted exterior supply partner ensuring product availability and delivery across every market we operate in — from the Shuswap to Southern Alberta.",
+      "Premium factory-finished wood and composite cladding systems — pre-coated for lasting colour integrity and dimensional stability.",
   },
 ]
 
@@ -984,7 +952,7 @@ export const TRUST_SIGNALS = [
   { label: "Family owned since 1994" },
   { label: "Gentek certified — 1 of 200 in Canada" },
   { label: "GutterGlove — Canada's #1 distributor" },
-  { label: "$15M liability insurance" },
+  { label: "$10M liability insurance" },
   { label: "Continuous WCB coverage since 1994" },
   { label: "Step Code compliant installer" },
 ]

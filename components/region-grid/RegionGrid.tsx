@@ -5,9 +5,9 @@ import Link from "next/link"
 import FadeIn from "@/components/ui/FadeIn"
 
 const STRIP_PHOTOS = [
-  { src: "/images/projects/siding-fibre-cement-9.jpg",  alt: "Kelowna — residential",  label: "Kelowna, BC" },
-  { src: "/images/heroes/commercial.jpg",               alt: "Commercial facade",        label: "Commercial" },
-  { src: "/images/projects/siding-metal-3.jpg",         alt: "Metal panel cladding",     label: "Metal Cladding" },
+  { src: "/images/projects/real-residential-modern.jpg", alt: "Kelowna — residential",  label: "Kelowna, BC" },
+  { src: "/images/projects/real-multifamily.jpg",        alt: "Commercial facade",       label: "Commercial & Multifamily" },
+  { src: "/images/projects/real-metal-siding.jpg",       alt: "Metal panel cladding",    label: "Metal Cladding" },
 ]
 
 export default function RegionGrid() {
@@ -20,7 +20,7 @@ export default function RegionGrid() {
           <div>
             <div className="flex items-center gap-4 mb-8">
               <div className="h-px w-10 bg-[#14008B]" />
-              <span className="text-[11px] font-medium uppercase tracking-[0.42em] text-white/60">
+              <span className="text-[11px] font-medium uppercase tracking-[0.42em] text-white">
                 BC & Alberta
               </span>
             </div>
@@ -37,7 +37,7 @@ export default function RegionGrid() {
           </div>
           <Link
             href="/projects"
-            className="group flex items-center gap-4 text-white/55 hover:text-white transition-colors duration-300 shrink-0 pb-1"
+            className="group flex items-center gap-4 text-white hover:text-white transition-colors duration-300 shrink-0 pb-1"
           >
             <span className="text-[11px] font-semibold uppercase tracking-[0.3em]">View All Projects</span>
             <div className="w-8 h-8 border border-white/15 group-hover:border-white/40 flex items-center justify-center transition-colors duration-300">
@@ -91,19 +91,13 @@ export default function RegionGrid() {
               />
 
               {/* Label */}
-              <div
-                className="absolute bottom-0 left-0 right-0 p-7 transition-all duration-400"
-                style={{
-                  opacity: hovered === i ? 1 : 0.55,
-                  transform: hovered === i ? "translateY(0)" : "translateY(5px)",
-                }}
-              >
+              <div className="absolute bottom-0 left-0 right-0 p-7">
                 <div className="flex items-center gap-3 mb-2">
                   <div
-                    className="h-px bg-[#14008B] transition-all duration-500"
+                    className="h-px bg-white transition-all duration-500"
                     style={{ width: hovered === i ? "20px" : "8px" }}
                   />
-                  <p className="text-[9px] font-semibold uppercase tracking-[0.42em] text-[#14008B]/80">
+                  <p className="text-[10px] font-semibold uppercase tracking-[0.42em] text-white">
                     {photo.label}
                   </p>
                 </div>
@@ -111,7 +105,7 @@ export default function RegionGrid() {
 
               {/* Index */}
               <div className="absolute top-5 left-6">
-                <span className="font-mono text-[8px] tracking-[0.22em] text-white/20">
+                <span className="font-mono text-[8px] tracking-[0.22em] text-white">
                   0{i + 1}
                 </span>
               </div>

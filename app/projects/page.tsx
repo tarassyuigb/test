@@ -5,26 +5,32 @@ import Link from "next/link"
 import { PROJECTS, type ProjectCategory } from "@/lib/site-content"
 import FadeIn from "@/components/ui/FadeIn"
 
-const FILTERS: { label: string; value: "all" | ProjectCategory }[] = [
+type FilterValue = "all" | ProjectCategory | "commercial-multifamily"
+
+const FILTERS: { label: string; value: FilterValue }[] = [
   { label: "All Work", value: "all" },
   { label: "Residential", value: "residential" },
-  { label: "Commercial", value: "commercial" },
-  { label: "Multifamily", value: "multifamily" },
+  { label: "Commercial & Multifamily", value: "commercial-multifamily" },
+  { label: "Gutters", value: "gutters" },
   { label: "Renovation", value: "renovation" },
 ]
 
 const CATEGORY_LABELS: Record<ProjectCategory, string> = {
   residential: "Residential",
-  commercial: "Commercial",
-  multifamily: "Multifamily",
+  commercial: "Commercial & Multifamily",
+  multifamily: "Commercial & Multifamily",
   gutters: "Gutters",
   renovation: "Renovation",
 }
 
 export default function ProjectsPage() {
-  const [active, setActive] = useState<"all" | ProjectCategory>("all")
+  const [active, setActive] = useState<FilterValue>("all")
   const filtered =
-    active === "all" ? PROJECTS : PROJECTS.filter((p) => p.category === active)
+    active === "all"
+      ? PROJECTS
+      : active === "commercial-multifamily"
+        ? PROJECTS.filter((p) => p.category === "commercial" || p.category === "multifamily")
+        : PROJECTS.filter((p) => p.category === active)
 
   return (
     <main className="bg-black min-h-screen">
@@ -41,7 +47,7 @@ export default function ProjectsPage() {
         <div className="relative max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-28">
           <div className="flex items-center gap-4 mb-10">
             <div className="h-px w-10 bg-[#14008B]" />
-            <span className="text-[11px] font-medium uppercase tracking-[0.42em] text-white/60">
+            <span className="text-[11px] font-medium uppercase tracking-[0.42em] text-white">
               Project Gallery · BC & Alberta
             </span>
           </div>
@@ -70,7 +76,7 @@ export default function ProjectsPage() {
                   className={`px-5 py-3 text-[10px] font-semibold uppercase tracking-[0.26em] border-r border-white/[0.08] last:border-r-0 transition-all duration-200 ${
                     active === f.value
                       ? "bg-[#14008B] text-white"
-                      : "text-white/55 hover:text-white hover:bg-white/[0.04]"
+                      : "text-white hover:text-white hover:bg-white/[0.04]"
                   }`}
                 >
                   {f.label}
@@ -115,7 +121,7 @@ export default function ProjectsPage() {
                       <span className="text-[9px] font-semibold uppercase tracking-[0.38em] text-[#14008B]">
                         {CATEGORY_LABELS[project.category]}
                       </span>
-                      <span className="font-mono text-[9px] tracking-[0.2em] text-white/35 ml-auto">
+                      <span className="font-mono text-[9px] tracking-[0.2em] text-white ml-auto">
                         {project.year}
                       </span>
                     </div>
@@ -125,20 +131,20 @@ export default function ProjectsPage() {
                     >
                       {project.title}
                     </h2>
-                    <p className="text-white/58 text-[12px] font-light tracking-wide mb-5">
+                    <p className="text-white text-[12px] font-light tracking-wide mb-5">
                       {project.location}
                     </p>
                     <ul className="space-y-2 mb-auto">
                       {project.scope.slice(0, 2).map((item, j) => (
                         <li key={j} className="flex items-start gap-2.5">
                           <div className="w-px h-3 bg-[#14008B]/50 mt-[2px] shrink-0" />
-                          <span className="text-white/62 text-[12px] font-light leading-relaxed tracking-wide">
+                          <span className="text-white text-[12px] font-light leading-relaxed tracking-wide">
                             {item}
                           </span>
                         </li>
                       ))}
                     </ul>
-                    <div className="flex items-center gap-3 mt-6 pt-5 border-t border-white/[0.05] text-white/30 group-hover:text-white/65 transition-colors duration-300">
+                    <div className="flex items-center gap-3 mt-6 pt-5 border-t border-white/[0.05] text-white group-hover:text-white transition-colors duration-300">
                       <span className="text-[9px] font-semibold uppercase tracking-[0.32em]">
                         Discuss This Project
                       </span>
@@ -166,7 +172,7 @@ export default function ProjectsPage() {
         </section>
       ) : (
         <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 py-28 text-center">
-          <p className="text-white/55 text-[15px] font-light tracking-wide">
+          <p className="text-white text-[15px] font-light tracking-wide">
             No projects in this category yet — check back soon.
           </p>
         </div>
@@ -178,7 +184,7 @@ export default function ProjectsPage() {
           <div>
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-10 bg-[#14008B]" />
-              <span className="text-[11px] font-medium uppercase tracking-[0.42em] text-white/60">
+              <span className="text-[11px] font-medium uppercase tracking-[0.42em] text-white">
                 Start Your Project
               </span>
             </div>
@@ -197,7 +203,7 @@ export default function ProjectsPage() {
                 Next.
               </span>
             </h2>
-            <p className="text-white/65 text-[15px] font-light leading-[1.72] tracking-wide max-w-[440px]">
+            <p className="text-white text-[15px] font-light leading-[1.72] tracking-wide max-w-[440px]">
               Free estimates. Fixed scopes. 30 years across BC and Alberta.
             </p>
           </div>
@@ -222,7 +228,7 @@ export default function ProjectsPage() {
             </Link>
             <Link
               href="/locations"
-              className="inline-flex items-center justify-center border border-white/[0.12] px-7 py-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/55 hover:text-white hover:border-white/28 transition-all duration-300"
+              className="inline-flex items-center justify-center border border-white/[0.12] px-7 py-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-white hover:text-white hover:border-white/28 transition-all duration-300"
             >
               View Locations
             </Link>

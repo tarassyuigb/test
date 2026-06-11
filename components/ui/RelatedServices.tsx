@@ -15,7 +15,7 @@ export default function RelatedServices({ serviceIds }: Props) {
         <FadeIn>
           <div className="flex items-center gap-4 mb-10">
             <div className="h-px w-10 bg-[#14008B]" />
-            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
               Related Services
             </span>
           </div>
@@ -27,13 +27,13 @@ export default function RelatedServices({ serviceIds }: Props) {
                 className="group relative bg-black p-8 lg:p-10 hover:bg-[#030018] transition-colors duration-300"
               >
                 <div className="flex items-start justify-between gap-4 mb-5">
-                  <span className="font-mono text-[9px] tracking-[0.28em] text-white/14">0{i + 1}</span>
+                  <span className="font-mono text-[9px] tracking-[0.28em] text-white">0{i + 1}</span>
                   <span className="text-[9px] font-semibold uppercase tracking-[0.3em] text-[#14008B] opacity-0 group-hover:opacity-100 transition-opacity duration-300">{s.tag}</span>
                 </div>
-                <h3 className="font-display font-black text-white/22 group-hover:text-white uppercase leading-[0.9] tracking-[-0.01em] mb-3 transition-colors duration-300" style={{ fontSize: "clamp(22px, 2.8vw, 38px)" }}>
+                <h3 className="font-display font-black text-white group-hover:text-white uppercase leading-[0.9] tracking-[-0.01em] mb-3 transition-colors duration-300" style={{ fontSize: "clamp(22px, 2.8vw, 38px)" }}>
                   {s.shortName}
                 </h3>
-                <p className="text-white/30 lg:text-white/0 text-[12.5px] font-light leading-relaxed tracking-wide mb-5 transition-colors duration-300 lg:group-hover:text-white/38">
+                <p className="text-white lg:text-white text-[12.5px] font-light leading-relaxed tracking-wide mb-5 transition-colors duration-300 lg:group-hover:text-white">
                   {s.summary}
                 </p>
                 <div className="flex items-center gap-2 text-[#14008B] text-[10px] font-semibold uppercase tracking-[0.3em] opacity-0 group-hover:opacity-100 transition-opacity duration-300">

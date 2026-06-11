@@ -43,7 +43,7 @@ const SERVICES: Service[] = [
     name: "Residential",
     tag: "Okanagan · Shuswap · Calgary",
     description:
-      "Vinyl, fibre cement, cedar, and metal siding systems — specified for western Canadian climate. Journeyman-led installations backed by 30 years of regional experience and a comprehensive product warranty.",
+      "Custom exterior design and cladding solutions for single-family and custom homes. From design consultation and 3D renderings to expert installation of fibre cement, engineered wood, metal cladding, and cedar, we help homeowners create distinctive, high-performance exteriors. Serving the Okanagan, Shuswap, and Alberta since 1994.",
     cta: "Explore Residential",
     href: "/residential",
     gradient:
@@ -54,10 +54,10 @@ const SERVICES: Service[] = [
   {
     id: "gutters",
     num: "03",
-    name: "Gutters",
+    name: "Gutters & Leaf-guards",
     tag: "All 6 Locations",
     description:
-      "Canada's #1 GutterGlove distributor. Continuous seamless systems with Alu-Rex hangers, heated IceBreaker for mountain climates, and over one million linear feet installed since 1994.",
+      "Complete eavestrough and drainage systems for residential and commercial projects. Featuring seamless eavestroughs in multiple profiles, stainless steel micro-mesh gutter guards, heated gutter protection systems, and architectural gutter solutions. Delivering reliable water management solutions across Western Canada since 1994.",
     cta: "Explore Gutters",
     href: "/gutters",
     gradient:
@@ -71,12 +71,12 @@ const SERVICES: Service[] = [
     name: "Renovation",
     tag: "Full Exterior Scope",
     description:
-      "Complete exterior renovations from design to completion. One of only 200 Gentek-certified premium renovators in Canada. Siding, windows, doors, soffits, sundecks — with computer-rendered visualization before any commitment.",
+      "Transform your home's exterior with confidence. From siding replacement and window and door packages to custom decks, covered outdoor living spaces, soffits, fascia, trim, and structural enhancements, we provide expert consultation and complimentary 3D renderings so you can see your vision come to life before construction begins.",
     cta: "Explore Renovation",
     href: "/renovation",
     gradient:
       "radial-gradient(ellipse at 72% 42%, rgba(20,0,139,0.18) 0%, rgba(0,0,0,0) 48%), radial-gradient(ellipse at 18% 72%, rgba(15,0,80,0.22) 0%, rgba(0,0,0,0) 52%)",
-    photo: "/images/projects/residential-farmhouse.jpg",
+    photo: "/images/projects/real-residential-modern.jpg",
     photoPos: "center 40%",
   },
 ]
@@ -130,7 +130,7 @@ function ServiceRow({
         {/* Main row */}
         <div className="flex items-center gap-5 sm:gap-10 py-9 sm:py-10 lg:py-12">
           {/* Number label */}
-          <span className="font-mono text-[11px] tracking-[0.28em] text-white/20 shrink-0 w-8 hidden sm:block">
+          <span className="font-mono text-[11px] tracking-[0.28em] text-white shrink-0 w-8 hidden sm:block">
             {service.num}
           </span>
 
@@ -156,7 +156,7 @@ function ServiceRow({
           <div className="flex items-center gap-5 shrink-0">
             {/* Location tag — desktop only */}
             <motion.span
-              className="text-[10px] font-medium uppercase tracking-[0.34em] text-white/38 hidden lg:block"
+              className="text-[10px] font-medium uppercase tracking-[0.34em] text-white hidden lg:block"
               animate={{
                 opacity: isActive ? 1 : 0,
                 x: isActive ? 0 : 14,
@@ -212,7 +212,7 @@ function ServiceRow({
               className="overflow-hidden"
             >
               <motion.p
-                className="text-white/50 text-[14.5px] sm:text-[15px] font-light leading-[1.72] tracking-wide max-w-[500px] pb-10 pt-1"
+                className="text-white text-[14.5px] sm:text-[15px] font-light leading-[1.72] tracking-wide max-w-[500px] pb-10 pt-1"
                 initial={{ y: 12, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: 6, opacity: 0 }}
@@ -259,7 +259,7 @@ export default function Services({ showHeader = true }: { showHeader?: boolean }
               transition={{ duration: 0.72, ease: EASE }}
             >
               <div className="h-px w-10 shrink-0 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                 What We Build
               </span>
             </motion.div>
@@ -369,7 +369,7 @@ export default function Services({ showHeader = true }: { showHeader?: boolean }
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <div className="text-center">
                   <div className="w-px h-16 bg-white/10 mx-auto mb-6" />
-                  <p className="text-[9px] font-medium uppercase tracking-[0.42em] text-white/20">
+                  <p className="text-[9px] font-medium uppercase tracking-[0.42em] text-white">
                     Hover to explore
                   </p>
                 </div>
@@ -387,13 +387,13 @@ export default function Services({ showHeader = true }: { showHeader?: boolean }
         animate={listInView ? { opacity: 1 } : {}}
         transition={{ delay: 0.45, duration: 0.8, ease: EASE }}
       >
-        <p className="text-white/28 text-[12px] font-medium uppercase tracking-[0.32em]">
+        <p className="text-white text-[12px] font-medium uppercase tracking-[0.32em]">
           Serving BC &amp; Alberta
         </p>
 
         <Link
           href="/contact"
-          className="group inline-flex items-center gap-3 text-white/50 text-[11px] font-semibold uppercase tracking-[0.28em] hover:text-white transition-colors duration-300"
+          className="group inline-flex items-center gap-3 text-white text-[11px] font-semibold uppercase tracking-[0.28em] hover:text-white transition-colors duration-300"
         >
           <span className="relative">
             Free Estimate

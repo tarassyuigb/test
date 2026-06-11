@@ -85,6 +85,16 @@
   --sidebar-ring: oklch(0.4 0 0);
 }
 
+/* ── Marquee keyframes ── */
+@keyframes marquee-fwd {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-33.333%); }
+}
+@keyframes marquee-rev {
+  from { transform: translateX(-33.333%); }
+  to   { transform: translateX(0%); }
+}
+
 @layer base {
   * {
     box-sizing: border-box;

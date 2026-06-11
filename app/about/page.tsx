@@ -5,7 +5,7 @@ import { BUSINESS, CREDENTIALS } from "@/lib/site-content"
 const ABOUT_STATS = [
   { value: "30+", label: "Years in Business" },
   { value: "#1", label: "GutterGlove Distributor" },
-  { value: "$15M", label: "Liability Insured" },
+  { value: "$10M", label: "Liability Insured" },
   { value: "100%", label: "Warranty Backed" },
 ]
 import FadeIn from "@/components/ui/FadeIn"
@@ -13,7 +13,7 @@ import FadeIn from "@/components/ui/FadeIn"
 export const metadata: Metadata = {
   title: "About Streamline Exteriors | BC & Alberta Exterior Contractor Since 1994",
   description:
-    "Family owned since 1994. Streamline Exteriors is the Okanagan–Shuswap's longest-serving exterior contractor. Gentek-certified, WCB-covered, $15M insured — serving BC and Alberta.",
+    "Family owned since 1994. Streamline Exteriors is the Okanagan–Shuswap's longest-serving exterior contractor. Gentek-certified, WCB-covered, $10M insured — serving BC and Alberta.",
   keywords: [
     "Streamline Exteriors about",
     "exterior contractor BC since 1994",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About Streamline Exteriors | BC & Alberta Exterior Contractor Since 1994",
     description:
-      "Family owned since 1994. The Okanagan–Shuswap's longest-serving exterior contractor. Gentek-certified, Canada's #1 GutterGlove distributor.",
+      "Family owned since 1994. The Okanagan–Shuswap's longest-serving exterior contractor. Gentek-certified, .",
     type: "website",
     url: "https://www.streamlineexteriors.ca/about",
   },
@@ -38,7 +38,7 @@ const ABOUT_SCHEMA = {
   name: "About Streamline Exteriors",
   url: "https://www.streamlineexteriors.ca/about",
   description:
-    "Family owned since 1994. Streamline Exteriors is the Okanagan–Shuswap's longest-serving exterior contractor. Gentek-certified, WCB-covered, $15M insured.",
+    "Family owned since 1994. Streamline Exteriors is the Okanagan–Shuswap's longest-serving exterior contractor. Gentek-certified, WCB-covered, $10M insured.",
   mainEntity: {
     "@type": "LocalBusiness",
     name: "Streamline Exteriors Ltd.",
@@ -47,7 +47,7 @@ const ABOUT_SCHEMA = {
     telephone: "+12508320610",
     email: "sales@streamlineexteriors.ca",
     url: "https://www.streamlineexteriors.ca",
-    areaServed: ["Kelowna", "Vernon", "Salmon Arm", "Enderby", "Revelstoke", "Calgary"],
+    areaServed: ["Kelowna", "Vernon", "Salmon Arm", "Revelstoke", "Calgary"],
     numberOfEmployees: { "@type": "QuantitativeValue", minValue: 10 },
   },
 }
@@ -71,7 +71,7 @@ const PROCESS_STEPS = [
   {
     num: "04",
     title: "Warranty",
-    body: "Standard 5-year warranty on all installations. Lifetime warranty available. $15M liability insurance and continuous WCB coverage since 1994.",
+    body: "Standard 5-year warranty on all installations. Lifetime warranty available. $10M liability insurance and continuous WCB coverage since 1994.",
   },
 ]
 
@@ -81,7 +81,7 @@ const CREDENTIAL_DETAILS = [
     body: "One of only 200 Gentek-certified premium renovators in Canada. This certification governs our window and door installation method — specifically the LePage Quad Max seal technique, the industry benchmark for weathertight openings.",
   },
   {
-    title: "Canada's #1 GutterGlove Distributor",
+    title: "Bonded & Insured",
     body: "Streamline Exteriors is the top-volume distributor of GutterGlove in Canada — the stainless-steel micro-mesh guard top-rated by Consumer Reports. Our volume reflects three decades of seamless gutter installations across BC and Alberta.",
   },
   {
@@ -89,8 +89,8 @@ const CREDENTIAL_DETAILS = [
     body: "We are certified installers for BC's Step Code energy requirements. This means proper vapour barriers, exterior insulation, and thermal bridge detailing that meets current provincial code — essential for any new or renovated building envelope.",
   },
   {
-    title: "$15M Liability Insurance",
-    body: "Full $15M commercial liability coverage. This is the threshold required by most property managers and general contractors for multi-family and commercial exterior work — and we carry it on every project, residential or commercial.",
+    title: "$10M Liability Insurance",
+    body: "Full $10M commercial liability coverage. This is the threshold required by most property managers and general contractors for multi-family and commercial exterior work — and we carry it on every project, residential or commercial.",
   },
   {
     title: "Continuous WCB Coverage",
@@ -119,7 +119,7 @@ export default function AboutPage() {
         <div className="relative max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-28">
           <div className="flex items-center gap-4 mb-10">
             <div className="h-px w-10 bg-[#14008B]" />
-            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
               About Streamline · Est. 1994
             </span>
           </div>
@@ -140,8 +140,8 @@ export default function AboutPage() {
                   One Standard.
                 </span>
               </h1>
-              <p className="text-white/45 text-[16px] font-light leading-[1.72] tracking-wide max-w-[580px] mb-8">
-                Family owned since 1994. The Okanagan–Shuswap's longest-serving exterior contractor, and Canada's top GutterGlove distributor. From Salmon Arm to Calgary — one standard.
+              <p className="text-white text-[16px] font-light leading-[1.72] tracking-wide max-w-[580px] mb-8">
+                Family owned since 1994. The Okanagan–Shuswap's longest-serving exterior contractor,. From Salmon Arm to Calgary — one standard.
               </p>
               <Link
                 href="/contact"
@@ -165,7 +165,7 @@ export default function AboutPage() {
                     >
                       {s.value}
                     </p>
-                    <p className="text-white/30 text-[10px] font-medium uppercase tracking-[0.22em]">
+                    <p className="text-white text-[10px] font-medium uppercase tracking-[0.22em]">
                       {s.label}
                     </p>
                   </div>
@@ -181,7 +181,7 @@ export default function AboutPage() {
                   >
                     {s.value}
                   </p>
-                  <p className="text-white/30 text-[10px] font-medium uppercase tracking-[0.24em]">
+                  <p className="text-white text-[10px] font-medium uppercase tracking-[0.24em]">
                     {s.label}
                   </p>
                 </div>
@@ -198,49 +198,49 @@ export default function AboutPage() {
             <FadeIn>
               <div className="flex items-center gap-4 mb-10">
                 <div className="h-px w-10 bg-[#14008B]" />
-                <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+                <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                   Our Story
                 </span>
               </div>
-              <p className="text-white/50 text-[15.5px] font-light leading-[1.78] tracking-wide mb-6">
+              <p className="text-white text-[15.5px] font-light leading-[1.78] tracking-wide mb-6">
                 Streamline Exteriors was founded in Salmon Arm in 1994 with a simple premise: that exterior construction deserved the same precision and accountability that was expected inside a home. Thirty years later, that standard hasn't changed — though the scale of our operations has.
               </p>
-              <p className="text-white/38 text-[14px] font-light leading-[1.78] tracking-wide mb-6">
+              <p className="text-white text-[14px] font-light leading-[1.78] tracking-wide mb-6">
                 We began with residential siding and gutter installations across the Shuswap. As our reputation built, so did the scope of work — expanding into the Okanagan, then into commercial and multi-family developments, and eventually into Alberta. Today, we operate from six locations across BC and Alberta, with installation teams scaled to both single-home renovations and 50-unit strata complexes.
               </p>
-              <p className="text-white/30 text-[13.5px] font-light leading-[1.78] tracking-wide">
+              <p className="text-white text-[13.5px] font-light leading-[1.78] tracking-wide">
                 What hasn't changed is the ownership structure. Streamline Exteriors remains family owned and operated — which means the accountability lives with the people who built it. When you call Streamline, you reach people who care about the result. Not because of policy, but because it's their name on the work.
               </p>
             </FadeIn>
             <FadeIn delay={0.12}>
             <div className="space-y-5">
               <div className="border border-white/[0.06] p-7">
-                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white/26 mb-6">
+                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white mb-6">
                   Credentials
                 </p>
                 <ul className="space-y-4">
                   {CREDENTIALS.map((c, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-[3px] h-[3px] rounded-full bg-[#14008B] mt-[7px] shrink-0" />
-                      <span className="text-white/40 text-[12.5px] font-light leading-relaxed tracking-wide">{c}</span>
+                      <span className="text-white text-[12.5px] font-light leading-relaxed tracking-wide">{c}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div className="border border-white/[0.06] p-7">
-                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white/26 mb-4">
+                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white mb-4">
                   Contact
                 </p>
                 <div className="space-y-2">
-                  <a href={BUSINESS.phone.primaryHref} className="flex items-center gap-3 text-white/38 text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200 group">
+                  <a href={BUSINESS.phone.primaryHref} className="flex items-center gap-3 text-white text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200 group">
                     <span className="w-3 h-px bg-[#14008B]/50 group-hover:w-4 transition-all duration-300" />
                     {BUSINESS.phone.primary} · Salmon Arm
                   </a>
-                  <a href={BUSINESS.phone.vernonHref} className="flex items-center gap-3 text-white/38 text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200 group">
+                  <a href={BUSINESS.phone.vernonHref} className="flex items-center gap-3 text-white text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200 group">
                     <span className="w-3 h-px bg-[#14008B]/50 group-hover:w-4 transition-all duration-300" />
                     {BUSINESS.phone.vernon} · Vernon
                   </a>
-                  <a href={`mailto:${BUSINESS.email}`} className="flex items-center gap-3 text-white/38 text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200 group">
+                  <a href={`mailto:${BUSINESS.email}`} className="flex items-center gap-3 text-white text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200 group">
                     <span className="w-3 h-px bg-[#14008B]/50 group-hover:w-4 transition-all duration-300" />
                     {BUSINESS.email}
                   </a>
@@ -267,7 +267,7 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-7">
-              <p className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white/50">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white">
                 Residential
               </p>
             </div>
@@ -282,7 +282,7 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-7">
-              <p className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white/50">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white">
                 Commercial
               </p>
             </div>
@@ -297,11 +297,62 @@ export default function AboutPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
             <div className="absolute bottom-0 left-0 right-0 p-7">
-              <p className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white/50">
+              <p className="text-[9px] font-semibold uppercase tracking-[0.44em] text-white">
                 Multifamily
               </p>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Testimonial ── */}
+      <section className="border-b border-white/[0.05]">
+        <div className="max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-28 py-24">
+          <FadeIn>
+            <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-16 items-end">
+              <div>
+                <div className="flex items-center gap-4 mb-12">
+                  <div className="h-px w-10 bg-[#14008B]" />
+                  <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
+                    Client Testimonial
+                  </span>
+                </div>
+                {/* Large quotation mark */}
+                <div
+                  className="font-display font-black text-[#14008B] leading-none mb-6 select-none"
+                  style={{ fontSize: "clamp(80px, 10vw, 140px)", lineHeight: 0.7 }}
+                  aria-hidden
+                >
+                  "
+                </div>
+                <blockquote
+                  className="font-display font-black text-white uppercase leading-[1.06] tracking-[-0.01em] mb-10"
+                  style={{ fontSize: "clamp(22px, 3vw, 42px)" }}
+                >
+                  Thank you for your team's amazing work and commitment to the project. You have an incredible lead with an eye for detail and the willingness to be part of the team.
+                </blockquote>
+                <div className="flex items-start gap-6">
+                  <div className="w-px self-stretch bg-[#14008B]" />
+                  <div>
+                    <p className="text-white text-[13px] font-semibold uppercase tracking-[0.22em] mb-1">
+                      Lance Wilson
+                    </p>
+                    <p className="text-white text-[11px] font-light uppercase tracking-[0.28em]">
+                      Superintendent · Chandos Construction
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div className="border border-white/[0.06] p-8 self-start">
+                <p className="text-[9px] font-semibold uppercase tracking-[0.42em] text-white mb-5">
+                  About Chandos
+                </p>
+                <p className="text-white text-[12.5px] font-light leading-relaxed tracking-wide">
+                  Chandos Construction is one of Canada's largest and most respected general contractors, operating across Western Canada with multi-billion dollar project portfolios spanning commercial, institutional, and industrial sectors.
+                </p>
+              </div>
+            </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -311,7 +362,7 @@ export default function AboutPage() {
           <FadeIn>
           <div className="flex items-center gap-4 mb-14">
             <div className="h-px w-10 bg-[#14008B]" />
-            <h2 className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+            <h2 className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
               Our Process
             </h2>
           </div>
@@ -319,13 +370,13 @@ export default function AboutPage() {
             {PROCESS_STEPS.map((step) => (
               <div key={step.num} className="bg-black p-8 lg:p-9 hover:bg-[#030018] transition-colors duration-300">
                 <div className="flex items-center gap-3 mb-6">
-                  <span className="font-mono text-[9px] tracking-[0.28em] text-white/14">{step.num}</span>
+                  <span className="font-mono text-[9px] tracking-[0.28em] text-white">{step.num}</span>
                   <div className="h-px flex-1 bg-white/[0.06]" />
                 </div>
                 <h3 className="font-display font-bold text-white uppercase text-[15px] tracking-[0.06em] mb-4">
                   {step.title}
                 </h3>
-                <p className="text-white/62 text-[12.5px] font-light leading-relaxed tracking-wide">
+                <p className="text-white text-[12.5px] font-light leading-relaxed tracking-wide">
                   {step.body}
                 </p>
               </div>
@@ -343,7 +394,7 @@ export default function AboutPage() {
               <p className="font-display font-black text-white uppercase tracking-[-0.01em] mb-1.5" style={{ fontSize: "clamp(18px, 2.2vw, 28px)" }}>
                 Thirty years. One standard.
               </p>
-              <p className="text-white/35 text-[11.5px] font-light tracking-wide">
+              <p className="text-white text-[11.5px] font-light tracking-wide">
                 Free estimates · BC & Alberta · Family owned since 1994
               </p>
             </div>
@@ -362,7 +413,7 @@ export default function AboutPage() {
               </Link>
               <Link
                 href="/projects"
-                className="inline-flex items-center justify-center border border-white/[0.1] px-7 py-3.5 text-[10.5px] font-semibold uppercase tracking-[0.24em] text-white/50 hover:text-white hover:border-white/25 transition-all duration-300"
+                className="inline-flex items-center justify-center border border-white/[0.1] px-7 py-3.5 text-[10.5px] font-semibold uppercase tracking-[0.24em] text-white hover:text-white hover:border-white/25 transition-all duration-300"
               >
                 View Our Projects
               </Link>
@@ -377,7 +428,7 @@ export default function AboutPage() {
           <FadeIn>
           <div className="flex items-center gap-4 mb-14">
             <div className="h-px w-10 bg-[#14008B]" />
-            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
               Certifications & Coverage
             </span>
           </div>
@@ -385,14 +436,14 @@ export default function AboutPage() {
             {/* Featured first credential — Gentek is the flagship certification */}
             <div className="sm:col-span-2 bg-black p-8 lg:p-10 hover:bg-[#030018] transition-colors duration-300">
               <div className="flex items-center gap-3 mb-5">
-                <span className="font-mono text-[9px] tracking-[0.28em] text-white/14">01</span>
+                <span className="font-mono text-[9px] tracking-[0.28em] text-white">01</span>
                 <div className="h-px flex-1 bg-white/[0.06]" />
                 <span className="text-[9px] font-semibold uppercase tracking-[0.32em] text-[#14008B] opacity-60">Flagship Certification</span>
               </div>
               <h3 className="font-display font-bold text-white uppercase text-[17px] tracking-[0.05em] mb-4 leading-snug">
                 {CREDENTIAL_DETAILS[0].title}
               </h3>
-              <p className="text-white/38 text-[13px] font-light leading-relaxed tracking-wide max-w-[620px]">
+              <p className="text-white text-[13px] font-light leading-relaxed tracking-wide max-w-[620px]">
                 {CREDENTIAL_DETAILS[0].body}
               </p>
             </div>
@@ -401,13 +452,13 @@ export default function AboutPage() {
             {CREDENTIAL_DETAILS.slice(1).map((cred, i) => (
               <div key={i} className="bg-black p-8 lg:p-9 hover:bg-[#030018] transition-colors duration-300">
                 <div className="flex items-center gap-3 mb-5">
-                  <span className="font-mono text-[9px] tracking-[0.28em] text-white/14">0{i + 2}</span>
+                  <span className="font-mono text-[9px] tracking-[0.28em] text-white">0{i + 2}</span>
                   <div className="h-px flex-1 bg-white/[0.06]" />
                 </div>
                 <h3 className="font-display font-bold text-white uppercase text-[13px] tracking-[0.06em] mb-4 leading-snug">
                   {cred.title}
                 </h3>
-                <p className="text-white/35 text-[12px] font-light leading-relaxed tracking-wide">
+                <p className="text-white text-[12px] font-light leading-relaxed tracking-wide">
                   {cred.body}
                 </p>
               </div>
@@ -424,7 +475,7 @@ export default function AboutPage() {
           <div className="max-w-[560px]">
             <div className="flex items-center gap-4 mb-6">
               <div className="h-px w-10 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+              <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                 Start a Project
               </span>
             </div>
@@ -438,7 +489,7 @@ export default function AboutPage() {
                 One Standard.
               </span>
             </h2>
-            <p className="text-white/40 text-[14px] font-light leading-[1.72] tracking-wide">
+            <p className="text-white text-[14px] font-light leading-[1.72] tracking-wide">
               Contact us to discuss your project. We'll assess the scope, specify the right materials, and provide a fixed estimate — no obligation.
             </p>
           </div>
@@ -457,7 +508,7 @@ export default function AboutPage() {
             </Link>
             <Link
               href="/projects"
-              className="inline-flex items-center justify-between gap-4 border border-white/[0.1] px-8 py-5 text-[11.5px] font-semibold uppercase tracking-[0.24em] text-white/50 hover:text-white hover:border-white/25 transition-all duration-300"
+              className="inline-flex items-center justify-between gap-4 border border-white/[0.1] px-8 py-5 text-[11.5px] font-semibold uppercase tracking-[0.24em] text-white hover:text-white hover:border-white/25 transition-all duration-300"
             >
               <span>View Our Projects</span>
               <svg width="13" height="13" viewBox="0 0 13 13" fill="none">
@@ -465,8 +516,8 @@ export default function AboutPage() {
               </svg>
             </Link>
             <div className="pt-2 border-t border-white/[0.06]">
-              <p className="text-white/20 text-[10px] uppercase tracking-[0.3em] mb-2">Direct line</p>
-              <a href={BUSINESS.phone.primaryHref} className="text-white/45 text-[13px] tracking-wide hover:text-white transition-colors duration-300">
+              <p className="text-white text-[10px] uppercase tracking-[0.3em] mb-2">Direct line</p>
+              <a href={BUSINESS.phone.primaryHref} className="text-white text-[13px] tracking-wide hover:text-white transition-colors duration-300">
                 {BUSINESS.phone.primary}
               </a>
             </div>

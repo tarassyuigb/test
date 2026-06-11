@@ -30,7 +30,7 @@ export const NAV_ITEMS: NavItem[] = [
         items: [
           { label: "Residential", href: "/residential" },
           { label: "Commercial & Multifamily", href: "/commercial" },
-          { label: "Gutters & Drainage", href: "/gutters" },
+          { label: "Gutters & Leaf-guards", href: "/gutters" },
           { label: "Full Renovation", href: "/renovation" },
         ],
       },
@@ -62,7 +62,6 @@ export const NAV_ITEMS: NavItem[] = [
           { label: "Kelowna", href: "/locations/kelowna" },
           { label: "Vernon", href: "/locations/vernon" },
           { label: "Salmon Arm", href: "/locations/salmon-arm" },
-          { label: "Enderby", href: "/locations/enderby" },
           { label: "Revelstoke", href: "/locations/revelstoke" },
         ],
       },

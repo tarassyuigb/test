@@ -19,7 +19,7 @@ export default function ServicesPage() {
           <div>
             <div className="flex items-center gap-4 mb-7">
               <div className="h-px w-10 bg-[#14008B]" />
-              <span className="text-[10px] font-medium uppercase tracking-[0.44em] text-white/50">
+              <span className="text-[10px] font-medium uppercase tracking-[0.44em] text-white">
                 What We Do
               </span>
             </div>
@@ -34,7 +34,7 @@ export default function ServicesPage() {
               </span>
             </h1>
           </div>
-          <p className="text-white/45 text-[14px] font-light leading-[1.78] tracking-wide max-w-[360px] sm:pb-2">
+          <p className="text-white text-[14px] font-light leading-[1.78] tracking-wide max-w-[360px] sm:pb-2">
             Five services. One standard.<br />
             BC and Alberta since 1994.
           </p>
@@ -61,7 +61,7 @@ export default function ServicesPage() {
                 Every Scope.
               </span>
             </p>
-            <p className="text-white/65 text-[15px] font-light leading-relaxed tracking-wide max-w-[440px]">
+            <p className="text-white text-[15px] font-light leading-relaxed tracking-wide max-w-[440px]">
               We assess your project and recommend the right scope — at no charge. One contractor across all five services.
             </p>
           </div>
@@ -80,7 +80,7 @@ export default function ServicesPage() {
             </Link>
             <Link
               href="/projects"
-              className="inline-flex items-center justify-center border border-white/[0.1] px-7 py-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-white/55 hover:text-white hover:border-white/25 transition-all duration-300"
+              className="inline-flex items-center justify-center border border-white/[0.1] px-7 py-5 text-[11px] font-semibold uppercase tracking-[0.24em] text-white hover:text-white hover:border-white/25 transition-all duration-300"
             >
               View Our Work
             </Link>

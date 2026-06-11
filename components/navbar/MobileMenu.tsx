@@ -93,7 +93,7 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
 
               <button
                 onClick={onClose}
-                className="flex h-9 w-9 items-center justify-center text-white/60 hover:text-white transition-colors"
+                className="flex h-9 w-9 items-center justify-center text-white hover:text-white transition-colors"
                 aria-label="Close menu"
               >
                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
@@ -119,7 +119,7 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
                           onClick={() => toggle(item.id)}
                           className="flex w-full items-center justify-between py-4 border-b border-white/[0.06] group"
                         >
-                          <span className="text-white text-2xl font-black tracking-[-0.01em] uppercase leading-none group-hover:text-white/70 transition-colors duration-200">
+                          <span className="text-white text-2xl font-black tracking-[-0.01em] uppercase leading-none group-hover:text-white transition-colors duration-200">
                             {item.label}
                           </span>
                           <motion.div
@@ -153,7 +153,7 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
                                           <Link
                                             href={sub.href}
                                             onClick={onClose}
-                                            className="text-white/60 text-sm tracking-wide hover:text-white transition-colors duration-200 block py-1"
+                                            className="text-white text-sm tracking-wide hover:text-white transition-colors duration-200 block py-1"
                                           >
                                             {sub.label}
                                           </Link>
@@ -173,7 +173,7 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
                         onClick={() => handleLinkClick(item.href)}
                         className="flex items-center justify-between py-4 border-b border-white/[0.06] group"
                       >
-                        <span className="text-white text-2xl font-black tracking-[-0.01em] uppercase leading-none group-hover:text-white/70 transition-colors duration-200">
+                        <span className="text-white text-2xl font-black tracking-[-0.01em] uppercase leading-none group-hover:text-white transition-colors duration-200">
                           {item.label}
                         </span>
                         <svg
@@ -181,7 +181,7 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
                           height="18"
                           viewBox="0 0 18 18"
                           fill="none"
-                          className="text-white/60 group-hover:text-white/60 transition-colors duration-200 -rotate-45"
+                          className="text-white group-hover:text-white transition-colors duration-200 -rotate-45"
                         >
                           <path d="M3 9H15M15 9L9 3M15 9L9 15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
@@ -200,7 +200,7 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
             >
               <div className="flex items-center gap-3 mb-5">
                 <div className="h-px w-6 shrink-0 bg-[#14008B]" />
-                <p className="text-white/65 text-[9.5px] tracking-[0.38em] uppercase">
+                <p className="text-white text-[9.5px] tracking-[0.38em] uppercase">
                   Start Your Project
                 </p>
               </div>
@@ -214,26 +214,26 @@ export default function MobileMenu({ isOpen, onClose }: Props) {
               </Link>
               <div className="mt-5 pt-4 border-t border-white/[0.06] flex flex-col gap-2.5">
                 <div>
-                  <p className="text-white/18 text-[9px] uppercase tracking-[0.32em] mb-1">Salmon Arm · Shuswap</p>
+                  <p className="text-white text-[9px] uppercase tracking-[0.32em] mb-1">Salmon Arm · Shuswap</p>
                   <a
                     href={BUSINESS.phone.primaryHref}
-                    className="text-white/68 text-[12.5px] tracking-wide hover:text-white transition-colors duration-200"
+                    className="text-white text-[12.5px] tracking-wide hover:text-white transition-colors duration-200"
                   >
                     {BUSINESS.phone.primary}
                   </a>
                 </div>
                 <div>
-                  <p className="text-white/18 text-[9px] uppercase tracking-[0.32em] mb-1">Vernon · Okanagan</p>
+                  <p className="text-white text-[9px] uppercase tracking-[0.32em] mb-1">Vernon · Okanagan</p>
                   <a
                     href={BUSINESS.phone.vernonHref}
-                    className="text-white/68 text-[12.5px] tracking-wide hover:text-white transition-colors duration-200"
+                    className="text-white text-[12.5px] tracking-wide hover:text-white transition-colors duration-200"
                   >
                     {BUSINESS.phone.vernon}
                   </a>
                 </div>
                 <a
                   href={`mailto:${BUSINESS.email}`}
-                  className="text-white/60 text-[11px] tracking-wide hover:text-white/60 transition-colors duration-200"
+                  className="text-white text-[11px] tracking-wide hover:text-white transition-colors duration-200"
                 >
                   {BUSINESS.email}
                 </a>

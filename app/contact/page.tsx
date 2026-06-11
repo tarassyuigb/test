@@ -13,7 +13,7 @@ const FAQ_SCHEMA = {
       name: "What areas does Streamline Exteriors serve?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We serve six markets across BC and Alberta: Kelowna, Vernon, Salmon Arm, Enderby, Revelstoke, and Calgary. For projects near these areas, contact us — we assess feasibility on a project-by-project basis.",
+        text: "We serve six markets across BC and Alberta: Kelowna, Vernon, Salmon Arm, Revelstoke, and Calgary. For projects near these areas, contact us — we assess feasibility on a project-by-project basis.",
       },
     },
     {
@@ -37,7 +37,7 @@ const FAQ_SCHEMA = {
       name: "What certifications does Streamline Exteriors carry?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "We are Gentek-certified premium renovators, LePage Quad Max seal certified, Step Code compliant installers, and Canada's #1 GutterGlove distributor. We carry $15M liability insurance and continuous WCB coverage.",
+        text: "We are Gentek-certified premium renovators, LePage Quad Max seal certified, Step Code compliant installers, and We carry $10M liability insurance and continuous WCB coverage.",
       },
     },
   ],
@@ -80,14 +80,14 @@ const OFFICES = [
     label: "Vernon Office",
     phone: BUSINESS.phone.vernon,
     href: BUSINESS.phone.vernonHref,
-    note: "Serving Vernon, Coldstream, Enderby, and Armstrong",
+    note: "Serving Vernon, Coldstream, Armstrong, and Enderby",
   },
 ]
 
 const FAQ = [
   {
     q: "What areas do you serve?",
-    a: "We serve six markets across BC and Alberta: Kelowna, Vernon, Salmon Arm, Enderby, Revelstoke, and Calgary. For projects near these areas, contact us — we assess feasibility on a project-by-project basis.",
+    a: "We serve six markets across BC and Alberta: Kelowna, Vernon, Salmon Arm, Revelstoke, and Calgary. For projects near these areas, contact us — we assess feasibility on a project-by-project basis.",
   },
   {
     q: "How quickly can you provide an estimate?",
@@ -99,7 +99,7 @@ const FAQ = [
   },
   {
     q: "What certifications do you carry?",
-    a: "We are Gentek-certified premium renovators, LePage Quad Max seal certified, Step Code compliant installers, and Canada's #1 GutterGlove distributor. We carry $15M liability insurance and continuous WCB coverage.",
+    a: "We are Gentek-certified premium renovators, LePage Quad Max seal certified, Step Code compliant installers, and We carry $10M liability insurance and continuous WCB coverage.",
   },
 ]
 
@@ -123,7 +123,7 @@ export default function ContactPage() {
         <div className="relative max-w-[1400px] mx-auto px-6 sm:px-10 lg:px-20 xl:px-28">
           <div className="flex items-center gap-4 mb-8">
             <div className="h-px w-10 bg-[#14008B]" />
-            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+            <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
               Free Estimates · BC & Alberta
             </span>
           </div>
@@ -144,16 +144,16 @@ export default function ContactPage() {
                   Touch.
                 </span>
               </h1>
-              <p className="text-white/42 text-[15px] font-light leading-[1.72] tracking-wide max-w-[500px] mb-8 lg:mb-0">
+              <p className="text-white text-[15px] font-light leading-[1.72] tracking-wide max-w-[500px] mb-8 lg:mb-0">
                 Tell us about your project — scope, location, and timeline. We'll be in touch within one business day to discuss next steps.
               </p>
               {/* Mobile quick-call links */}
               <div className="flex flex-col gap-2 lg:hidden">
                 {OFFICES.map((o) => (
-                  <a key={o.city} href={o.href} className="flex items-center gap-3 text-white/45 text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200">
+                  <a key={o.city} href={o.href} className="flex items-center gap-3 text-white text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200">
                     <div className="w-[3px] h-[3px] rounded-full bg-[#14008B] shrink-0" />
                     <span>{o.phone}</span>
-                    <span className="text-white/22 text-[11px]">· {o.city}</span>
+                    <span className="text-white text-[11px]">· {o.city}</span>
                   </a>
                 ))}
               </div>
@@ -166,11 +166,11 @@ export default function ContactPage() {
                   className="group flex items-center gap-5 border border-white/[0.06] px-7 py-5 hover:border-white/[0.14] transition-colors duration-300"
                 >
                   <div>
-                    <p className="text-[9px] font-semibold uppercase tracking-[0.36em] text-white/26 mb-1">{o.label}</p>
-                    <p className="text-white/60 text-[14px] font-light tracking-wide group-hover:text-white transition-colors duration-200">{o.phone}</p>
-                    <p className="text-white/22 text-[11px] font-light tracking-wide mt-0.5">{o.city}, {o.province}</p>
+                    <p className="text-[9px] font-semibold uppercase tracking-[0.36em] text-white mb-1">{o.label}</p>
+                    <p className="text-white text-[14px] font-light tracking-wide group-hover:text-white transition-colors duration-200">{o.phone}</p>
+                    <p className="text-white text-[11px] font-light tracking-wide mt-0.5">{o.city}, {o.province}</p>
                   </div>
-                  <svg width="10" height="10" viewBox="0 0 13 13" fill="none" className="text-white/20 group-hover:text-[#14008B] transition-colors duration-200 ml-auto shrink-0">
+                  <svg width="10" height="10" viewBox="0 0 13 13" fill="none" className="text-white group-hover:text-[#14008B] transition-colors duration-200 ml-auto shrink-0">
                     <path d="M2 6.5H11M11 6.5L6.5 2M11 6.5L6.5 11" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 </a>
@@ -187,7 +187,7 @@ export default function ContactPage() {
             {CREDENTIALS.map((cred) => (
               <div key={cred} className="py-5 px-4 first:pl-0 last:pr-0">
                 <div className="w-[3px] h-[3px] rounded-full bg-[#14008B] mb-3" />
-                <p className="text-white/40 text-[11px] font-light leading-snug tracking-wide">{cred}</p>
+                <p className="text-white text-[11px] font-light leading-snug tracking-wide">{cred}</p>
               </div>
             ))}
           </div>
@@ -204,7 +204,7 @@ export default function ContactPage() {
             <div>
               <div className="flex items-center gap-4 mb-10">
                 <div className="h-px w-10 bg-[#14008B]" />
-                <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white/45">
+                <span className="text-[10px] font-medium uppercase tracking-[0.42em] text-white">
                   Project Enquiry
                 </span>
               </div>
@@ -216,17 +216,17 @@ export default function ContactPage() {
 
               {/* Offices */}
               <div className="border border-white/[0.06] p-7">
-                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white/26 mb-6">
+                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white mb-6">
                   Offices
                 </p>
                 <div className="space-y-6">
                   {OFFICES.map((o) => (
                     <div key={o.city}>
-                      <p className="text-[9px] font-semibold uppercase tracking-[0.32em] text-white/22 mb-2">{o.label}</p>
-                      <a href={o.href} className="text-white/55 text-[13.5px] font-light tracking-wide hover:text-white transition-colors duration-200 block mb-1">
+                      <p className="text-[9px] font-semibold uppercase tracking-[0.32em] text-white mb-2">{o.label}</p>
+                      <a href={o.href} className="text-white text-[13.5px] font-light tracking-wide hover:text-white transition-colors duration-200 block mb-1">
                         {o.phone}
                       </a>
-                      <p className="text-white/25 text-[11px] font-light tracking-wide">{o.note}</p>
+                      <p className="text-white text-[11px] font-light tracking-wide">{o.note}</p>
                     </div>
                   ))}
                 </div>
@@ -234,12 +234,12 @@ export default function ContactPage() {
 
               {/* Email */}
               <div className="border border-white/[0.06] p-7">
-                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white/26 mb-4">
+                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white mb-4">
                   Email
                 </p>
                 <a
                   href={`mailto:${BUSINESS.email}`}
-                  className="text-white/50 text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200"
+                  className="text-white text-[13px] font-light tracking-wide hover:text-white transition-colors duration-200"
                 >
                   {BUSINESS.email}
                 </a>
@@ -247,14 +247,14 @@ export default function ContactPage() {
 
               {/* Service area */}
               <div className="border border-white/[0.06] p-7">
-                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white/26 mb-5">
+                <p className="text-[9.5px] font-semibold uppercase tracking-[0.42em] text-white mb-5">
                   Service Area
                 </p>
                 <div className="space-y-2">
                   {CITIES.map((city) => (
                     <div key={city.id} className="flex items-center justify-between">
-                      <span className="text-white/40 text-[12px] font-light tracking-wide">{city.name}</span>
-                      <span className="text-white/20 text-[10px] uppercase tracking-[0.24em]">{city.province}</span>
+                      <span className="text-white text-[12px] font-light tracking-wide">{city.name}</span>
+                      <span className="text-white text-[10px] uppercase tracking-[0.24em]">{city.province}</span>
                     </div>
                   ))}
                 </div>
